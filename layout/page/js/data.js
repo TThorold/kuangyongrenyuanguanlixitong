@@ -1,4 +1,4 @@
-const databaset = [
+const database = [
     {
         "id": "1",
         "cardId": "496",

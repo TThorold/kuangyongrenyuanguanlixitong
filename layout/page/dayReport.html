@@ -8,7 +8,6 @@
     <script type="text/javascript" src="./js/calendar.js.下载"></script>
     <script type="text/javascript" src="./js/calendar-zh.js.下载"></script>
     <script type="text/javascript" src="./js/calendar-setup.js.下载"></script>
-    <script type="text/javascript" src="./js/xlsx.mini.min.js"></script>
     <script type="text/javascript" src="./js/data.js"></script>
 
     <script>
@@ -21,14 +20,25 @@
         }
 
         function valid(obj) {
-            if (!obj.date) {
-                console.log('233')
+            if (!obj.date || !obj.timeFrame) {
                 document.getElementById('rf1').style.display = 'block'
+                return false
+            } else {
+                document.getElementById('rf1').style.display = 'none'
+                return true
             }
         }
 
+        function formatTime(str) {
+            const arr = str.split(" ")
+            const ddyymm = arr[0].split('/')
+            let time = [ddyymm[2], ddyymm[0], ddyymm[1]]
+            time = time.map(Number)
+            return time
+        }
+
         function addNodes(obj) {
-            const table = document.getElementById("dbGrid_People");
+            const table = document.getElementById("dbGrid_People").getElementsByTagName('tbody')[0];
             let newRow = table.insertRow();
             // 创建三个新单元格
             let cellID = newRow.insertCell();
@@ -52,17 +62,44 @@
             cellStayTime.innerHTML = obj.stayTime;
         }
 
+        function clearTable() {
+            const tbody = document.getElementById('dbGrid_People').getElementsByTagName('tbody')[0];
+            // 直接清空 tbody 中的所有行
+            tbody.innerHTML = '';
+        }
+
         function getData() {
-            const date = document.getElementById("rptDate").value;
+            clearTable()
+
             const dept = document.getElementById("dpBMList").value;
             const name = document.getElementById("PeopleName").value;
             const cardId = document.getElementById("TagNo").value;
             const workId = document.getElementById("GongHao").value;
+            const date = document.getElementById("rptDate").value;
             const timeFrame = document.getElementById("ddlTime").value;
 
-            const validObj = { date, dept, name, cardId, timeFrame, workId }
+            const validObj = {date, dept, name, cardId, timeFrame, workId}
 
-            valid(validObj)
+            if (valid(validObj)) {
+                let count = 1;
+                for (let i = 0; i < database.length; i++) {
+                    const item = database[i]
+                    if (validObj.workId) continue;
+                    if (validObj.name && item.name !== validObj.name) continue;
+                    if (validObj.cardId && item.cardId !== validObj.cardId) continue;
+                    const inp = formatTime(validObj.date)
+                    const dbt = formatTime(item.intoTime)
+
+                    if (inp[2] !== dbt[1] || inp[0] !== dbt[2]) continue;
+
+                    if (count > 10) break;
+
+                    item.id = count;
+                    addNodes(item)
+                    count++;
+
+                }
+            }
 
         }
 
@@ -134,9 +171,9 @@
 </select>
     姓名：<input name="PeopleName" type="text" id="PeopleName" style="width:50px;">
     卡号：<input name="TagNo"
-                                                                                                    type="text"
-                                                                                                    id="TagNo"
-                                                                                                    style="width:50px;">
+                type="text"
+                id="TagNo"
+                style="width:50px;">
     工号：<input name="GongHao" type="text" id="GongHao" style="width:50px;">
     &nbsp;<br>
     时间：<select name="ddlTime" id="ddlTime">
@@ -151,34 +188,34 @@
 
     <input value=" 查 找 " onclick="getData()" name="Search" type="submit" id="Search" class="button"
            onmouseover="onButton(this);" onmouseout="offButton(this);">
-    <input value=" 打 印 " onclick="alert('暂无权限')" name="Print" type="submit" id="Print"  class="button"
-            onmouseout="offButton(this);" onmouseover="onButton(this);">
-    <span id="rf1" style="color:Red;display:none;">请输入日期</span>
-    <span id="rv1" style="color:Red;display:none;">请输入数字</span>
-    <span id="rf2" style="color:Red;display:none;">请输入时间</span>
-    <span id="rv2" style="color:Red;display:none;">请输入数字</span>
+    <input value=" 打 印 " onclick="alert('暂无权限')" name="Print" type="submit" id="Print" class="button"
+           onmouseout="offButton(this);" onmouseover="onButton(this);">
+    <span id="rf1" style="color:Red;display:none;">日期、时间不能为空</span>
 
 
     <div>
         <table class="Grid" cellspacing="0" rules="all" border="1" id="dbGrid_People"
                style="border-style:Dotted;width:100%;border-collapse:collapse;">
+            <thead>
                 <tr style="white-space:nowrap;">
-                    <th scope="col" style="width:40px;">序号</th>
-                    <th scope="col"><a href="#">卡号</a>
-                    </th>
-                    <th scope="col"><a href="#">工号</a>
-                    </th>
-                    <th scope="col"><a href="#">姓名</a></th>
-                    <th scope="col"><a href="#">部门</a>
-                    </th>
-                    <th scope="col"><a href="#">入井时间</a>
-                    </th>
-                    <th scope="col"><a href="#">升井时间</a>
-                    </th>
-                    <th scope="col"><a href="#">班次</a>
-                    </th>
-                    <th scope="col"><a href="#">停留时间</a></th>
-                </tr>
+                <th scope="col" style="width:40px;">序号</th>
+                <th scope="col"><a href="#">卡号</a>
+                </th>
+                <th scope="col"><a href="#">工号</a>
+                </th>
+                <th scope="col"><a href="#">姓名</a></th>
+                <th scope="col"><a href="#">部门</a>
+                </th>
+                <th scope="col"><a href="#">入井时间</a>
+                </th>
+                <th scope="col"><a href="#">升井时间</a>
+                </th>
+                <th scope="col"><a href="#">班次</a>
+                </th>
+                <th scope="col"><a href="#">停留时间</a></th>
+            </tr>
+            </thead>
+            <tbody></tbody>
         </table>
     </div>
 
