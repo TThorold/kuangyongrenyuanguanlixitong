@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>
+		无标题页
+	</title>
+	<style type="text/css">
+		body,
+		td,
+		th {
+			font-family: 宋体;
+			font-size: 12px;
+		}
+
+		body {
+			FONT-SIZE: 10.5pt;
+			FONT-FAMILY: 宋体;
+			margin-left: 0px;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+			background-attachment: fixed;
+			background: #4b93c7;
+			background-position: left bottom;
+		}
+
+		TD {
+			FONT-SIZE: 10.5pt;
+			FONT-FAMILY: 宋体
+		}
+
+		TH {
+			FONT-SIZE: 10.5pt;
+			FONT-FAMILY: 宋体
+		}
+
+		.dh_font {
+			PADDING-LEFT: 10px;
+			FONT-SIZE: 10.5pt;
+			COLOR: #ffffff;
+			FONT-FAMILY: "宋体";
+			LETTER-SPACING: 1px
+		}
+
+		.tomg {
+			FONT-SIZE: 10.5pt;
+			COLOR: #ffffff;
+			TEXT-DECORATION: none
+		}
+
+		A.tomg:link {
+			COLOR: #ffffff;
+			TEXT-DECORATION: none
+		}
+
+		A.tomg:visited {
+			COLOR: #ffffff;
+			TEXT-DECORATION: none
+		}
+
+		A.tomg:hover {
+			COLOR: #ff0000;
+			TEXT-DECORATION: none
+		}
+	</style>
+
+	<script type="text/javascript">
+		function DisTime() {
+			ctime = new Date();
+			var chour = ctime.getHours();
+			var cminute = ctime.getMinutes();
+			var csecond = ctime.getSeconds();
+			if (eval(chour) < 10) { chour = "0" + chour; }
+			if (eval(cminute) < 10) { cminute = "0" + cminute; }
+			if (csecond < 10) { csecond = "0" + csecond; }
+			ctime = chour + ":" + cminute + ":" + csecond;
+			Clock.innerHTML = ctime;
+			document.getElementById("Clock").innerHTML=ctime
+		}
+
+		setInterval('DisTime()', 1000);
+	</script>
+</head>
+
+<body>
+	<table width="100%" height="20" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td align="left"><input type="submit" name="btnalert" value="显示报警" id="btnalert"></td>
+				<td align="center" width="150" class="dh_font">当前井下人数：<span id="onlinenum">
+						<font color="white">778</font>
+					</span></td>
+				<td align="right" class="dh_font">安特信(北京)科技有限公司 版权所有
+				</td>
+				<td align="right" width="50" class="dh_font"><span id="Clock">18:30:56</span>&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>
