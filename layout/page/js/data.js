@@ -1,4 +1,3 @@
-
 const databaset = [
     {
         "id": "1",
@@ -6,7 +5,7 @@ const databaset = [
         "workId": "",
         "name": "宁华伟",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 0:18",
+        "intoTime": "7/15/24 0:18",
         "outTime": "7/15/24 5:24",
         "shift": "零点班",
         "stayTime": "5:06"
@@ -17,7 +16,7 @@ const databaset = [
         "workId": "",
         "name": "王鹏程",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 6:08",
+        "intoTime": "7/15/24 6:08",
         "outTime": "7/15/24 11:38",
         "shift": "八点班",
         "stayTime": "5:30"
@@ -28,7 +27,7 @@ const databaset = [
         "workId": "",
         "name": "王尚魁",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 6:56",
+        "intoTime": "7/15/24 6:56",
         "outTime": "7/15/24 12:02",
         "shift": "八点班",
         "stayTime": "5:06"
@@ -39,7 +38,7 @@ const databaset = [
         "workId": "",
         "name": "周健",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:04",
+        "intoTime": "7/15/24 7:04",
         "outTime": "7/15/24 13:02",
         "shift": "八点班",
         "stayTime": "5:58"
@@ -50,7 +49,7 @@ const databaset = [
         "workId": "",
         "name": "李建",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:03",
+        "intoTime": "7/15/24 7:03",
         "outTime": "7/15/24 12:55",
         "shift": "八点班",
         "stayTime": "5:52"
@@ -61,7 +60,7 @@ const databaset = [
         "workId": "",
         "name": "吕新国",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:03",
+        "intoTime": "7/15/24 7:03",
         "outTime": "7/15/24 12:56",
         "shift": "八点班",
         "stayTime": "5:53"
@@ -72,7 +71,7 @@ const databaset = [
         "workId": "",
         "name": "薛财旺",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:05",
+        "intoTime": "7/15/24 7:05",
         "outTime": "7/15/24 12:28",
         "shift": "八点班",
         "stayTime": "5:23"
@@ -83,7 +82,7 @@ const databaset = [
         "workId": "",
         "name": "路二学",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:05",
+        "intoTime": "7/15/24 7:05",
         "outTime": "7/15/24 17:05",
         "shift": "八点班",
         "stayTime": "10:00"
@@ -94,7 +93,7 @@ const databaset = [
         "workId": "",
         "name": "梁新广",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:06",
+        "intoTime": "7/15/24 7:06",
         "outTime": "7/15/24 17:05",
         "shift": "八点班",
         "stayTime": "9:59"
@@ -105,7 +104,7 @@ const databaset = [
         "workId": "",
         "name": "韩宗锋",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:06",
+        "intoTime": "7/15/24 7:06",
         "outTime": "7/15/24 13:05",
         "shift": "八点班",
         "stayTime": "5:59"
@@ -116,7 +115,7 @@ const databaset = [
         "workId": "",
         "name": "赵正义",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:06",
+        "intoTime": "7/15/24 7:06",
         "outTime": "7/15/24 12:51",
         "shift": "八点班",
         "stayTime": "5:45"
@@ -127,7 +126,7 @@ const databaset = [
         "workId": "",
         "name": "王要民",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:06",
+        "intoTime": "7/15/24 7:06",
         "outTime": "7/15/24 12:35",
         "shift": "八点班",
         "stayTime": "5:29"
@@ -138,7 +137,7 @@ const databaset = [
         "workId": "",
         "name": "万中卫",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:07",
+        "intoTime": "7/15/24 7:07",
         "outTime": "7/15/24 12:35",
         "shift": "八点班",
         "stayTime": "5:28"
@@ -149,7 +148,7 @@ const databaset = [
         "workId": "",
         "name": "薛朋飞",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:06",
+        "intoTime": "7/15/24 7:06",
         "outTime": "7/15/24 12:29",
         "shift": "八点班",
         "stayTime": "5:23"
@@ -160,7 +159,7 @@ const databaset = [
         "workId": "",
         "name": "王记新",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:07",
+        "intoTime": "7/15/24 7:07",
         "outTime": "7/15/24 16:38",
         "shift": "八点班",
         "stayTime": "9:31"
@@ -171,7 +170,7 @@ const databaset = [
         "workId": "",
         "name": "李亚彬",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:09",
+        "intoTime": "7/15/24 7:09",
         "outTime": "7/15/24 16:30",
         "shift": "八点班",
         "stayTime": "9:21"
@@ -182,7 +181,7 @@ const databaset = [
         "workId": "",
         "name": "赵红斌",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 7:10",
+        "intoTime": "7/15/24 7:10",
         "outTime": "7/15/24 13:36",
         "shift": "八点班",
         "stayTime": "5:26"
@@ -193,7 +192,7 @@ const databaset = [
         "workId": "",
         "name": "王建刚",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:44",
+        "intoTime": "7/15/24 13:44",
         "outTime": "7/15/24 23:49",
         "shift": "四点班",
         "stayTime": "10:05"
@@ -204,7 +203,7 @@ const databaset = [
         "workId": "",
         "name": "孙清泉",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:51",
+        "intoTime": "7/15/24 13:51",
         "outTime": "7/16/24 1:00",
         "shift": "四点班",
         "stayTime": "11:09"
@@ -215,7 +214,7 @@ const databaset = [
         "workId": "",
         "name": "单铁铜",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:51",
+        "intoTime": "7/15/24 13:51",
         "outTime": "7/15/24 20:14",
         "shift": "四点班",
         "stayTime": "6:23"
@@ -226,7 +225,7 @@ const databaset = [
         "workId": "",
         "name": "宋红卫",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:51",
+        "intoTime": "7/15/24 13:51",
         "outTime": "7/16/24 0:53",
         "shift": "四点班",
         "stayTime": "11:02"
@@ -237,7 +236,7 @@ const databaset = [
         "workId": "",
         "name": "乔红星",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:53",
+        "intoTime": "7/15/24 13:53",
         "outTime": "7/16/24 2:51",
         "shift": "四点班",
         "stayTime": "12:58"
@@ -248,7 +247,7 @@ const databaset = [
         "workId": "",
         "name": "王晓辉",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:55",
+        "intoTime": "7/15/24 13:55",
         "outTime": "7/15/24 23:48",
         "shift": "四点班",
         "stayTime": "9:53"
@@ -259,7 +258,7 @@ const databaset = [
         "workId": "",
         "name": "张中良",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:55",
+        "intoTime": "7/15/24 13:55",
         "outTime": "7/15/24 23:48",
         "shift": "四点班",
         "stayTime": "9:53"
@@ -270,7 +269,7 @@ const databaset = [
         "workId": "",
         "name": "闫勇",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:55",
+        "intoTime": "7/15/24 13:55",
         "outTime": "7/15/24 23:38",
         "shift": "四点班",
         "stayTime": "9:43"
@@ -281,7 +280,7 @@ const databaset = [
         "workId": "",
         "name": "李国功",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:56",
+        "intoTime": "7/15/24 13:56",
         "outTime": "7/16/24 0:50",
         "shift": "四点班",
         "stayTime": "10:54"
@@ -292,7 +291,7 @@ const databaset = [
         "workId": "",
         "name": "王利强",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:57",
+        "intoTime": "7/15/24 13:57",
         "outTime": "7/16/24 1:01",
         "shift": "四点班",
         "stayTime": "11:04"
@@ -303,7 +302,7 @@ const databaset = [
         "workId": "",
         "name": "胡万才",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:56",
+        "intoTime": "7/15/24 13:56",
         "outTime": "7/16/24 0:51",
         "shift": "四点班",
         "stayTime": "10:55"
@@ -314,7 +313,7 @@ const databaset = [
         "workId": "",
         "name": "徐小勇",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:57",
+        "intoTime": "7/15/24 13:57",
         "outTime": "7/16/24 0:52",
         "shift": "四点班",
         "stayTime": "10:55"
@@ -325,7 +324,7 @@ const databaset = [
         "workId": "",
         "name": "张军良",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 13:57",
+        "intoTime": "7/15/24 13:57",
         "outTime": "7/15/24 21:57",
         "shift": "四点班",
         "stayTime": "8:00"
@@ -336,7 +335,7 @@ const databaset = [
         "workId": "",
         "name": "张皓曦",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:00",
+        "intoTime": "7/15/24 14:00",
         "outTime": "7/16/24 2:51",
         "shift": "四点班",
         "stayTime": "12:51"
@@ -347,7 +346,7 @@ const databaset = [
         "workId": "",
         "name": "王恩胜",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:01",
+        "intoTime": "7/15/24 14:01",
         "outTime": "7/16/24 2:51",
         "shift": "四点班",
         "stayTime": "12:50"
@@ -358,7 +357,7 @@ const databaset = [
         "workId": "",
         "name": "柴青选",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:03",
+        "intoTime": "7/15/24 14:03",
         "outTime": "7/15/24 23:48",
         "shift": "四点班",
         "stayTime": "9:45"
@@ -369,7 +368,7 @@ const databaset = [
         "workId": "",
         "name": "崔泽钳",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:07",
+        "intoTime": "7/15/24 14:07",
         "outTime": "7/15/24 23:40",
         "shift": "四点班",
         "stayTime": "9:33"
@@ -380,7 +379,7 @@ const databaset = [
         "workId": "",
         "name": "李晓维",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:08",
+        "intoTime": "7/15/24 14:08",
         "outTime": "7/15/24 23:41",
         "shift": "四点班",
         "stayTime": "9:33"
@@ -391,7 +390,7 @@ const databaset = [
         "workId": "",
         "name": "魏俊忠",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:16",
+        "intoTime": "7/15/24 14:16",
         "outTime": "7/15/24 22:00",
         "shift": "四点班",
         "stayTime": "7:44"
@@ -402,7 +401,7 @@ const databaset = [
         "workId": "",
         "name": "张中民",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:17",
+        "intoTime": "7/15/24 14:17",
         "outTime": "7/16/24 0:31",
         "shift": "四点班",
         "stayTime": "10:14"
@@ -413,7 +412,7 @@ const databaset = [
         "workId": "",
         "name": "李平生",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:17",
+        "intoTime": "7/15/24 14:17",
         "outTime": "7/15/24 23:49",
         "shift": "四点班",
         "stayTime": "9:32"
@@ -424,7 +423,7 @@ const databaset = [
         "workId": "",
         "name": "孙海洋",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:17",
+        "intoTime": "7/15/24 14:17",
         "outTime": "7/16/24 1:40",
         "shift": "四点班",
         "stayTime": "11:23"
@@ -435,7 +434,7 @@ const databaset = [
         "workId": "",
         "name": "田铁杠",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:17",
+        "intoTime": "7/15/24 14:17",
         "outTime": "7/16/24 0:31",
         "shift": "四点班",
         "stayTime": "10:14"
@@ -446,7 +445,7 @@ const databaset = [
         "workId": "",
         "name": "彭建永",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:32",
+        "intoTime": "7/15/24 14:32",
         "outTime": "7/15/24 22:02",
         "shift": "四点班",
         "stayTime": "7:30"
@@ -457,7 +456,7 @@ const databaset = [
         "workId": "",
         "name": "赵伟杰",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:41",
+        "intoTime": "7/15/24 14:41",
         "outTime": "7/15/24 21:38",
         "shift": "四点班",
         "stayTime": "6:57"
@@ -468,7 +467,7 @@ const databaset = [
         "workId": "",
         "name": "史伟伟",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:40",
+        "intoTime": "7/15/24 14:40",
         "outTime": "7/15/24 22:12",
         "shift": "四点班",
         "stayTime": "7:32"
@@ -479,7 +478,7 @@ const databaset = [
         "workId": "",
         "name": "杨国勋",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:41",
+        "intoTime": "7/15/24 14:41",
         "outTime": "7/15/24 22:02",
         "shift": "四点班",
         "stayTime": "7:21"
@@ -490,7 +489,7 @@ const databaset = [
         "workId": "",
         "name": "邢全超",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:41",
+        "intoTime": "7/15/24 14:41",
         "outTime": "7/15/24 21:56",
         "shift": "四点班",
         "stayTime": "7:15"
@@ -501,7 +500,7 @@ const databaset = [
         "workId": "",
         "name": "郭胜利",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 14:41",
+        "intoTime": "7/15/24 14:41",
         "outTime": "7/15/24 21:39",
         "shift": "四点班",
         "stayTime": "6:58"
@@ -512,7 +511,7 @@ const databaset = [
         "workId": "",
         "name": "郭印",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 16:16",
+        "intoTime": "7/15/24 16:16",
         "outTime": "7/16/24 0:20",
         "shift": "四点班",
         "stayTime": "8:04"
@@ -523,7 +522,7 @@ const databaset = [
         "workId": "",
         "name": "陈瑞强",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 17:13",
+        "intoTime": "7/15/24 17:13",
         "outTime": "7/15/24 21:50",
         "shift": "四点班",
         "stayTime": "4:37"
@@ -534,7 +533,7 @@ const databaset = [
         "workId": "",
         "name": "郭武响",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 21:38",
+        "intoTime": "7/15/24 21:38",
         "outTime": "7/16/24 2:46",
         "shift": "零点班",
         "stayTime": "5:08"
@@ -545,7 +544,7 @@ const databaset = [
         "workId": "",
         "name": "关梦凯",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 21:50",
+        "intoTime": "7/15/24 21:50",
         "outTime": "7/16/24 3:41",
         "shift": "零点班",
         "stayTime": "5:51"
@@ -556,7 +555,7 @@ const databaset = [
         "workId": "",
         "name": "冉敬佩",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 21:50",
+        "intoTime": "7/15/24 21:50",
         "outTime": "7/16/24 3:41",
         "shift": "零点班",
         "stayTime": "5:51"
@@ -567,7 +566,7 @@ const databaset = [
         "workId": "",
         "name": "牛连军",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 21:50",
+        "intoTime": "7/15/24 21:50",
         "outTime": "7/16/24 3:38",
         "shift": "零点班",
         "stayTime": "5:48"
@@ -578,7 +577,7 @@ const databaset = [
         "workId": "",
         "name": "韦秀锋",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 21:52",
+        "intoTime": "7/15/24 21:52",
         "outTime": "7/16/24 3:27",
         "shift": "零点班",
         "stayTime": "5:35"
@@ -589,7 +588,7 @@ const databaset = [
         "workId": "",
         "name": "曹明云",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 21:51",
+        "intoTime": "7/15/24 21:51",
         "outTime": "7/16/24 2:51",
         "shift": "零点班",
         "stayTime": "5:00"
@@ -600,7 +599,7 @@ const databaset = [
         "workId": "",
         "name": "李中乾",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 21:53",
+        "intoTime": "7/15/24 21:53",
         "outTime": "7/16/24 3:27",
         "shift": "零点班",
         "stayTime": "5:34"
@@ -611,7 +610,7 @@ const databaset = [
         "workId": "",
         "name": "吴鹏果",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 21:53",
+        "intoTime": "7/15/24 21:53",
         "outTime": "7/16/24 3:26",
         "shift": "零点班",
         "stayTime": "5:33"
@@ -622,7 +621,7 @@ const databaset = [
         "workId": "",
         "name": "宋德华",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 21:57",
+        "intoTime": "7/15/24 21:57",
         "outTime": "7/15/24 23:48",
         "shift": "零点班",
         "stayTime": "1:51"
@@ -633,7 +632,7 @@ const databaset = [
         "workId": "",
         "name": "赵其正",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 21:57",
+        "intoTime": "7/15/24 21:57",
         "outTime": "7/16/24 3:51",
         "shift": "零点班",
         "stayTime": "5:54"
@@ -644,7 +643,7 @@ const databaset = [
         "workId": "",
         "name": "朱书军",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 21:57",
+        "intoTime": "7/15/24 21:57",
         "outTime": "7/16/24 3:41",
         "shift": "零点班",
         "stayTime": "5:44"
@@ -655,7 +654,7 @@ const databaset = [
         "workId": "",
         "name": "袁廷功",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 22:04",
+        "intoTime": "7/15/24 22:04",
         "outTime": "7/16/24 11:11",
         "shift": "零点班",
         "stayTime": "13:07"
@@ -666,7 +665,7 @@ const databaset = [
         "workId": "",
         "name": "雷红坡",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 22:07",
+        "intoTime": "7/15/24 22:07",
         "outTime": "7/16/24 10:56",
         "shift": "零点班",
         "stayTime": "12:49"
@@ -677,7 +676,7 @@ const databaset = [
         "workId": "",
         "name": "李要红",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 22:09",
+        "intoTime": "7/15/24 22:09",
         "outTime": "7/16/24 11:01",
         "shift": "零点班",
         "stayTime": "12:52"
@@ -688,7 +687,7 @@ const databaset = [
         "workId": "",
         "name": "薛会平",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 22:19",
+        "intoTime": "7/15/24 22:19",
         "outTime": "7/16/24 3:22",
         "shift": "零点班",
         "stayTime": "5:03"
@@ -699,7 +698,7 @@ const databaset = [
         "workId": "",
         "name": "汤英豪",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 22:21",
+        "intoTime": "7/15/24 22:21",
         "outTime": "7/16/24 3:22",
         "shift": "零点班",
         "stayTime": "5:01"
@@ -710,7 +709,7 @@ const databaset = [
         "workId": "",
         "name": "张广召",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 22:31",
+        "intoTime": "7/15/24 22:31",
         "outTime": "7/16/24 4:23",
         "shift": "零点班",
         "stayTime": "5:52"
@@ -721,7 +720,7 @@ const databaset = [
         "workId": "",
         "name": "王本雨",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 22:32",
+        "intoTime": "7/15/24 22:32",
         "outTime": "7/16/24 4:10",
         "shift": "零点班",
         "stayTime": "5:38"
@@ -732,7 +731,7 @@ const databaset = [
         "workId": "",
         "name": "郭水龙",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 22:32",
+        "intoTime": "7/15/24 22:32",
         "outTime": "7/16/24 11:11",
         "shift": "零点班",
         "stayTime": "12:39"
@@ -743,7 +742,7 @@ const databaset = [
         "workId": "",
         "name": "鲁进国",
         "dept": "综采准备队",
-        "intoTime": "2024/7/15 22:37",
+        "intoTime": "7/15/24 22:37",
         "outTime": "7/16/24 3:40",
         "shift": "零点班",
         "stayTime": "5:03"
@@ -754,7 +753,7 @@ const databaset = [
         "workId": "",
         "name": "王鹏程",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 6:04",
+        "intoTime": "7/16/24 6:04",
         "outTime": "7/16/24 11:24",
         "shift": "八点班",
         "stayTime": "5:20"
@@ -765,7 +764,7 @@ const databaset = [
         "workId": "",
         "name": "薛财旺",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:15",
+        "intoTime": "7/16/24 7:15",
         "outTime": "7/16/24 12:42",
         "shift": "八点班",
         "stayTime": "5:27"
@@ -776,7 +775,7 @@ const databaset = [
         "workId": "",
         "name": "梁新广",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:16",
+        "intoTime": "7/16/24 7:16",
         "outTime": "7/16/24 12:34",
         "shift": "八点班",
         "stayTime": "5:18"
@@ -787,7 +786,7 @@ const databaset = [
         "workId": "",
         "name": "王松立",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:16",
+        "intoTime": "7/16/24 7:16",
         "outTime": "7/16/24 12:35",
         "shift": "八点班",
         "stayTime": "5:19"
@@ -798,7 +797,7 @@ const databaset = [
         "workId": "",
         "name": "王记新",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:17",
+        "intoTime": "7/16/24 7:17",
         "outTime": "7/16/24 17:33",
         "shift": "八点班",
         "stayTime": "10:16"
@@ -809,7 +808,7 @@ const databaset = [
         "workId": "",
         "name": "周健",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:17",
+        "intoTime": "7/16/24 7:17",
         "outTime": "7/16/24 15:42",
         "shift": "八点班",
         "stayTime": "5:25"
@@ -820,7 +819,7 @@ const databaset = [
         "workId": "",
         "name": "李亚彬",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:17",
+        "intoTime": "7/16/24 7:17",
         "outTime": "7/16/24 17:33",
         "shift": "八点班",
         "stayTime": "10:16"
@@ -831,7 +830,7 @@ const databaset = [
         "workId": "",
         "name": "郭向辉",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:17",
+        "intoTime": "7/16/24 7:17",
         "outTime": "7/16/24 17:33",
         "shift": "八点班",
         "stayTime": "10:16"
@@ -842,7 +841,7 @@ const databaset = [
         "workId": "",
         "name": "秦涛",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:17",
+        "intoTime": "7/16/24 7:17",
         "outTime": "7/16/24 17:34",
         "shift": "八点班",
         "stayTime": "10:17"
@@ -853,7 +852,7 @@ const databaset = [
         "workId": "",
         "name": "薛朋飞",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:23",
+        "intoTime": "7/16/24 7:23",
         "outTime": "7/16/24 12:36",
         "shift": "八点班",
         "stayTime": "5:13"
@@ -864,7 +863,7 @@ const databaset = [
         "workId": "",
         "name": "王海军",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:23",
+        "intoTime": "7/16/24 7:23",
         "outTime": "7/16/24 12:33",
         "shift": "八点班",
         "stayTime": "5:10"
@@ -875,7 +874,7 @@ const databaset = [
         "workId": "",
         "name": "王尚魁",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:23",
+        "intoTime": "7/16/24 7:23",
         "outTime": "7/16/24 13:06",
         "shift": "八点班",
         "stayTime": "5:43"
@@ -886,7 +885,7 @@ const databaset = [
         "workId": "",
         "name": "王要民",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:23",
+        "intoTime": "7/16/24 7:23",
         "outTime": "7/16/24 12:35",
         "shift": "八点班",
         "stayTime": "5:12"
@@ -897,7 +896,7 @@ const databaset = [
         "workId": "",
         "name": "何洪",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:27",
+        "intoTime": "7/16/24 7:27",
         "outTime": "7/16/24 13:06",
         "shift": "八点班",
         "stayTime": "5:39"
@@ -908,7 +907,7 @@ const databaset = [
         "workId": "",
         "name": "万中卫",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:27",
+        "intoTime": "7/16/24 7:27",
         "outTime": "7/16/24 13:00",
         "shift": "八点班",
         "stayTime": "5:33"
@@ -919,7 +918,7 @@ const databaset = [
         "workId": "",
         "name": "李建",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 7:31",
+        "intoTime": "7/16/24 7:31",
         "outTime": "7/16/24 13:01",
         "shift": "八点班",
         "stayTime": "5:30"
@@ -930,7 +929,7 @@ const databaset = [
         "workId": "",
         "name": "单铁铜",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 8:55",
+        "intoTime": "7/16/24 8:55",
         "outTime": "7/16/24 13:59",
         "shift": "八点班",
         "stayTime": "5:04"
@@ -941,7 +940,7 @@ const databaset = [
         "workId": "",
         "name": "赵献良",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 9:48",
+        "intoTime": "7/16/24 9:48",
         "outTime": "7/16/24 14:59",
         "shift": "八点班",
         "stayTime": "5:11"
@@ -952,7 +951,7 @@ const databaset = [
         "workId": "",
         "name": "张世伟",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 10:16",
+        "intoTime": "7/16/24 10:16",
         "outTime": "7/16/24 15:52",
         "shift": "八点班",
         "stayTime": "5:36"
@@ -963,7 +962,7 @@ const databaset = [
         "workId": "",
         "name": "闫凯",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 10:16",
+        "intoTime": "7/16/24 10:16",
         "outTime": "7/16/24 15:52",
         "shift": "八点班",
         "stayTime": "5:36"
@@ -974,7 +973,7 @@ const databaset = [
         "workId": "",
         "name": "王建刚",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 13:41",
+        "intoTime": "7/16/24 13:41",
         "outTime": "7/17/24 0:19",
         "shift": "四点班",
         "stayTime": "10:38"
@@ -985,7 +984,7 @@ const databaset = [
         "workId": "",
         "name": "东超峰",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 13:46",
+        "intoTime": "7/16/24 13:46",
         "outTime": "7/17/24 0:51",
         "shift": "四点班",
         "stayTime": "11:05"
@@ -996,7 +995,7 @@ const databaset = [
         "workId": "",
         "name": "徐小勇",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 13:50",
+        "intoTime": "7/16/24 13:50",
         "outTime": "7/16/24 21:50",
         "shift": "四点班",
         "stayTime": "8:00"
@@ -1007,7 +1006,7 @@ const databaset = [
         "workId": "",
         "name": "张中民",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 13:53",
+        "intoTime": "7/16/24 13:53",
         "outTime": "7/17/24 0:49",
         "shift": "四点班",
         "stayTime": "10:56"
@@ -1018,7 +1017,7 @@ const databaset = [
         "workId": "",
         "name": "乔红星",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 13:53",
+        "intoTime": "7/16/24 13:53",
         "outTime": "7/17/24 3:57",
         "shift": "四点班",
         "stayTime": "14:04"
@@ -1029,7 +1028,7 @@ const databaset = [
         "workId": "",
         "name": "王晓辉",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 13:53",
+        "intoTime": "7/16/24 13:53",
         "outTime": "7/16/24 23:27",
         "shift": "四点班",
         "stayTime": "9:34"
@@ -1040,7 +1039,7 @@ const databaset = [
         "workId": "",
         "name": "胡万才",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 13:54",
+        "intoTime": "7/16/24 13:54",
         "outTime": "7/17/24 2:00",
         "shift": "四点班",
         "stayTime": "12:06"
@@ -1051,7 +1050,7 @@ const databaset = [
         "workId": "",
         "name": "赵亚辉",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 13:54",
+        "intoTime": "7/16/24 13:54",
         "outTime": "7/17/24 1:52",
         "shift": "四点班",
         "stayTime": "11:58"
@@ -1062,7 +1061,7 @@ const databaset = [
         "workId": "",
         "name": "田铁杠",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 13:57",
+        "intoTime": "7/16/24 13:57",
         "outTime": "7/17/24 1:28",
         "shift": "四点班",
         "stayTime": "11:31"
@@ -1073,7 +1072,7 @@ const databaset = [
         "workId": "",
         "name": "唐旭阳",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 13:57",
+        "intoTime": "7/16/24 13:57",
         "outTime": "7/17/24 1:28",
         "shift": "四点班",
         "stayTime": "11:31"
@@ -1084,7 +1083,7 @@ const databaset = [
         "workId": "",
         "name": "柴青选",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 13:57",
+        "intoTime": "7/16/24 13:57",
         "outTime": "7/16/24 23:27",
         "shift": "四点班",
         "stayTime": "9:30"
@@ -1095,7 +1094,7 @@ const databaset = [
         "workId": "",
         "name": "宋红卫",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 14:00",
+        "intoTime": "7/16/24 14:00",
         "outTime": "7/17/24 1:28",
         "shift": "四点班",
         "stayTime": "11:28"
@@ -1106,7 +1105,7 @@ const databaset = [
         "workId": "",
         "name": "王鹏举",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 14:05",
+        "intoTime": "7/16/24 14:05",
         "outTime": "7/17/24 3:57",
         "shift": "四点班",
         "stayTime": "13:52"
@@ -1117,7 +1116,7 @@ const databaset = [
         "workId": "",
         "name": "崔泽钳",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 14:16",
+        "intoTime": "7/16/24 14:16",
         "outTime": "7/17/24 3:07",
         "shift": "四点班",
         "stayTime": "12:51"
@@ -1128,7 +1127,7 @@ const databaset = [
         "workId": "",
         "name": "李晓维",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 14:17",
+        "intoTime": "7/16/24 14:17",
         "outTime": "7/17/24 3:07",
         "shift": "四点班",
         "stayTime": "12:50"
@@ -1139,7 +1138,7 @@ const databaset = [
         "workId": "",
         "name": "张来",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 14:20",
+        "intoTime": "7/16/24 14:20",
         "outTime": "7/17/24 1:58",
         "shift": "四点班",
         "stayTime": "11:38"
@@ -1150,7 +1149,7 @@ const databaset = [
         "workId": "",
         "name": "李国功",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 14:23",
+        "intoTime": "7/16/24 14:23",
         "outTime": "7/17/24 0:49",
         "shift": "四点班",
         "stayTime": "10:26"
@@ -1161,7 +1160,7 @@ const databaset = [
         "workId": "",
         "name": "郝军健",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 14:23",
+        "intoTime": "7/16/24 14:23",
         "outTime": "7/17/24 1:54",
         "shift": "四点班",
         "stayTime": "11:31"
@@ -1172,7 +1171,7 @@ const databaset = [
         "workId": "",
         "name": "张皓曦",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 14:23",
+        "intoTime": "7/16/24 14:23",
         "outTime": "7/17/24 1:55",
         "shift": "四点班",
         "stayTime": "11:32"
@@ -1183,7 +1182,7 @@ const databaset = [
         "workId": "",
         "name": "赵伟杰",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 16:18",
+        "intoTime": "7/16/24 16:18",
         "outTime": "7/16/24 22:34",
         "shift": "四点班",
         "stayTime": "6:16"
@@ -1194,7 +1193,7 @@ const databaset = [
         "workId": "",
         "name": "彭建永",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 16:18",
+        "intoTime": "7/16/24 16:18",
         "outTime": "7/16/24 22:56",
         "shift": "四点班",
         "stayTime": "6:38"
@@ -1205,7 +1204,7 @@ const databaset = [
         "workId": "",
         "name": "郭胜利",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 16:18",
+        "intoTime": "7/16/24 16:18",
         "outTime": "7/17/24 1:18",
         "shift": "四点班",
         "stayTime": "9:00"
@@ -1216,7 +1215,7 @@ const databaset = [
         "workId": "",
         "name": "邢全超",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 16:18",
+        "intoTime": "7/16/24 16:18",
         "outTime": "7/16/24 22:39",
         "shift": "四点班",
         "stayTime": "6:21"
@@ -1227,7 +1226,7 @@ const databaset = [
         "workId": "",
         "name": "杨国勋",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 16:18",
+        "intoTime": "7/16/24 16:18",
         "outTime": "7/16/24 22:58",
         "shift": "四点班",
         "stayTime": "6:40"
@@ -1238,7 +1237,7 @@ const databaset = [
         "workId": "",
         "name": "杨成山",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 16:21",
+        "intoTime": "7/16/24 16:21",
         "outTime": "7/16/24 23:00",
         "shift": "四点班",
         "stayTime": "6:39"
@@ -1249,7 +1248,7 @@ const databaset = [
         "workId": "",
         "name": "宋德华",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 21:44",
+        "intoTime": "7/16/24 21:44",
         "outTime": "7/17/24 3:07",
         "shift": "零点班",
         "stayTime": "5:23"
@@ -1260,7 +1259,7 @@ const databaset = [
         "workId": "",
         "name": "王晓冰",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 21:44",
+        "intoTime": "7/16/24 21:44",
         "outTime": "7/17/24 3:27",
         "shift": "零点班",
         "stayTime": "5:43"
@@ -1271,7 +1270,7 @@ const databaset = [
         "workId": "",
         "name": "鲁进国",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 21:44",
+        "intoTime": "7/16/24 21:44",
         "outTime": "7/17/24 3:25",
         "shift": "零点班",
         "stayTime": "5:41"
@@ -1282,7 +1281,7 @@ const databaset = [
         "workId": "",
         "name": "郭武响",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 21:48",
+        "intoTime": "7/16/24 21:48",
         "outTime": "7/17/24 2:55",
         "shift": "零点班",
         "stayTime": "5:07"
@@ -1293,7 +1292,7 @@ const databaset = [
         "workId": "",
         "name": "司永宾",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:15",
+        "intoTime": "7/16/24 22:15",
         "outTime": "7/17/24 10:55",
         "shift": "零点班",
         "stayTime": "12:40"
@@ -1304,7 +1303,7 @@ const databaset = [
         "workId": "",
         "name": "赵其正",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:16",
+        "intoTime": "7/16/24 22:16",
         "outTime": "7/17/24 3:27",
         "shift": "零点班",
         "stayTime": "5:11"
@@ -1315,7 +1314,7 @@ const databaset = [
         "workId": "",
         "name": "李中乾",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:17",
+        "intoTime": "7/16/24 22:17",
         "outTime": "7/17/24 3:49",
         "shift": "零点班",
         "stayTime": "5:32"
@@ -1326,7 +1325,7 @@ const databaset = [
         "workId": "",
         "name": "陈瑞强",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:17",
+        "intoTime": "7/16/24 22:17",
         "outTime": "7/17/24 3:24",
         "shift": "零点班",
         "stayTime": "5:07"
@@ -1337,7 +1336,7 @@ const databaset = [
         "workId": "",
         "name": "袁廷功",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:21",
+        "intoTime": "7/16/24 22:21",
         "outTime": "7/17/24 10:29",
         "shift": "零点班",
         "stayTime": "12:08"
@@ -1348,7 +1347,7 @@ const databaset = [
         "workId": "",
         "name": "雷红坡",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:28",
+        "intoTime": "7/16/24 22:28",
         "outTime": "7/17/24 9:48",
         "shift": "零点班",
         "stayTime": "11:20"
@@ -1359,7 +1358,7 @@ const databaset = [
         "workId": "",
         "name": "薛会平",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:29",
+        "intoTime": "7/16/24 22:29",
         "outTime": "7/17/24 3:49",
         "shift": "零点班",
         "stayTime": "5:20"
@@ -1370,7 +1369,7 @@ const databaset = [
         "workId": "",
         "name": "关梦凯",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:30",
+        "intoTime": "7/16/24 22:30",
         "outTime": "7/17/24 4:27",
         "shift": "零点班",
         "stayTime": "5:57"
@@ -1381,7 +1380,7 @@ const databaset = [
         "workId": "",
         "name": "衡子宇",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:30",
+        "intoTime": "7/16/24 22:30",
         "outTime": "7/17/24 10:08",
         "shift": "零点班",
         "stayTime": "11:38"
@@ -1392,7 +1391,7 @@ const databaset = [
         "workId": "",
         "name": "郭水龙",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:30",
+        "intoTime": "7/16/24 22:30",
         "outTime": "7/17/24 4:27",
         "shift": "零点班",
         "stayTime": "5:57"
@@ -1403,7 +1402,7 @@ const databaset = [
         "workId": "",
         "name": "朱书军",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:30",
+        "intoTime": "7/16/24 22:30",
         "outTime": "7/17/24 3:48",
         "shift": "零点班",
         "stayTime": "5:18"
@@ -1414,7 +1413,7 @@ const databaset = [
         "workId": "",
         "name": "曹明云",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:29",
+        "intoTime": "7/16/24 22:29",
         "outTime": "7/17/24 4:27",
         "shift": "零点班",
         "stayTime": "5:58"
@@ -1425,7 +1424,7 @@ const databaset = [
         "workId": "",
         "name": "吴鹏果",
         "dept": "综采准备队",
-        "intoTime": "2024/7/16 22:34",
+        "intoTime": "7/16/24 22:34",
         "outTime": "7/17/24 3:45",
         "shift": "零点班",
         "stayTime": "5:11"
