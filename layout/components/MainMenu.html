@@ -67,14 +67,26 @@
             if (document.getElementById(id).src.includes('plus')) {
                 document.getElementById(id).src = '../../img/layout/tminus.gif'
                 document.getElementById(`${id}Nodes`).style.display = 'block'
+                if(id === 'TreeViewCategoriesn18') {
+                    document.getElementById('TreeViewCategoriest18').classList.add('SelectedNodeStyle');
+                }
             } else if (document.getElementById(id).src.includes('minus')) {
                 document.getElementById(id).src = '../../img/layout/tplus.gif'
                 document.getElementById(`${id}Nodes`).style.display = 'none'
+                document.getElementById('TreeViewCategoriest18').classList.remove('SelectedNodeStyle');
             }
         }
 
-        function isChecked(id) {
-            if (document.getElementById(id).style)
+        function parentChecked(id) {
+            const list = ['TreeViewCategoriest19', 'TreeViewCategoriest20', 'TreeViewCategoriest21']
+            document.getElementById('TreeViewCategoriest18').classList.add('SelectedNodeStyle');
+            document.getElementById(id).classList.add('SelectedNodeStyle');
+
+            for (let i = 0; i < list.length; i++) {
+                if (list[i] !== id) {
+                    document.getElementById(list[i]).classList.remove('SelectedNodeStyle');
+                }
+            }
         }
     </script>
 </head>
@@ -373,12 +385,13 @@
         <tbody>
         <tr>
             <td>
-                <img id="TreeViewCategoriesn18" onclick="isFold('TreeViewCategoriesn18')" src="../../img/layout/tminus.gif" alt="折叠" style="border-width:0;">
+                <img id="TreeViewCategoriesn18" onclick="isFold('TreeViewCategoriesn18')"
+                     src="../../img/layout/tminus.gif" alt="折叠" style="border-width:0;">
             </td>
             <td
-                    class="NodeStyle TreeViewCategories_2 RootNodeStyle TreeViewCategories_4 SelectedNodeStyle TreeViewCategories_10"
+                    class="NodeStyle TreeViewCategories_2 RootNodeStyle TreeViewCategories_4 SelectedNodeStyle"
                     style="white-space:nowrap;"><a
-                    class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 RootNodeStyle TreeViewCategories_3 SelectedNodeStyle TreeViewCategories_9"
+                    class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 RootNodeStyle TreeViewCategories_3"
                     href="#"
                     id="TreeViewCategoriest18" style="border-style:none;font-size:1em;">考勤</a></td>
         </tr>
@@ -393,10 +406,11 @@
                 </td>
                 <td><img src="../../img/layout/t.gif" alt=""></td>
                 <td
-                        class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8 TreeViewCategories_10 SelectedNodeStyle"
-                        style="white-space:nowrap;"><a
-                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7 TreeViewCategories_9 SelectedNodeStyle"
-                        href="../page/dayReport.html" target="mainFrame"
+                        class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8 TreeViewCategories_10"
+                        style="white-space:nowrap;">
+                    <a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="../page/dayReport.html" target="mainFrame" onclick="parentChecked('TreeViewCategoriest19')"
                         id="TreeViewCategoriest19" style="border-style:none;font-size:1em;">考勤日报</a></td>
             </tr>
             </tbody>
@@ -410,8 +424,8 @@
                 <td><img src="../../img/layout/t.gif" alt=""></td>
                 <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
                     style="white-space:nowrap;"><a
-                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
-                        href="../page/monthReport.html" target="mainFrame"
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7 "
+                        href="../page/monthReport.html" target="mainFrame" onclick="parentChecked('TreeViewCategoriest20')"
                         id="TreeViewCategoriest20" style="border-style:none;font-size:1em;">考勤月报</a></td>
             </tr>
             </tbody>
@@ -426,7 +440,7 @@
                 <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
                     style="white-space:nowrap;"><a
                         class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
-                        href="../page/monthCard.html" target="mainFrame"
+                        href="../page/monthCard.html" target="mainFrame" onclick="parentChecked('TreeViewCategoriest21')"
                         id="TreeViewCategoriest21" style="border-style:none;font-size:1em;">考勤月卡</a></td>
             </tr>
             </tbody>
@@ -481,7 +495,7 @@
         <tr>
             <td>
                 <img id="TreeViewCategoriesn25" onclick="isFold('TreeViewCategoriesn25')"
-                    src="../../img/layout/tplus.gif" alt="展开 报警求援" style="border-width:0;">
+                     src="../../img/layout/tplus.gif" alt="展开 报警求援" style="border-width:0;">
             </td>
             <td class="NodeStyle TreeViewCategories_2 RootNodeStyle TreeViewCategories_4" style="white-space:nowrap;"><a
                     class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 RootNodeStyle TreeViewCategories_3"
@@ -561,7 +575,7 @@
         <tr>
             <td>
                 <img id="TreeViewCategoriesn30" onclick="isFold('TreeViewCategoriesn30')"
-                    src="../../img/layout/tplus.gif" alt="展开 地图" style="border-width:0;">
+                     src="../../img/layout/tplus.gif" alt="展开 地图" style="border-width:0;">
             </td>
             <td class="NodeStyle TreeViewCategories_2 RootNodeStyle TreeViewCategories_4" style="white-space:nowrap;"><a
                     class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 RootNodeStyle TreeViewCategories_3"
@@ -609,7 +623,7 @@
         <tr>
             <td>
                 <img id="TreeViewCategoriesn33" onclick="isFold('TreeViewCategoriesn33')"
-                    src="../../img/layout/tplus.gif" alt="展开 系统设置" style="border-width:0;">
+                     src="../../img/layout/tplus.gif" alt="展开 系统设置" style="border-width:0;">
             </td>
             <td class="NodeStyle TreeViewCategories_2 RootNodeStyle TreeViewCategories_4" style="white-space:nowrap;"><a
                     class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 RootNodeStyle TreeViewCategories_3"
