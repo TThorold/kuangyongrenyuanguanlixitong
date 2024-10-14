@@ -338,7 +338,7 @@ a:active {
 	top: 0.6em;
 	left: 15px;
 	font-size: 2.6em;
-	font-family: "ËÎÌå";
+	font-family: "ï¿½ï¿½ï¿½ï¿½";
 	height: 1.6em;
 	padding: .1em 0 .2em 0;
 	font-variant: small-caps;
@@ -807,22 +807,22 @@ input.button-small {
 	background-color: #EBEBF5;
 }
 
-.blackshade {
+.Grid th {
 	background-color: #D1DCEB;
 	font-weight: bold;
 }
 
-.blackshade:hover {
-	color: #FFCC00;
+.Grid tr:nth-child(even) {
+	color: #333333;
+	background-color: #EBEBF5;
 }
 
 input.button,
 input.buttonM {
-	background: #FFF;
-	BACKGROUND-IMAGE: url(../../images/button_a_blue.gif);
+	background: linear-gradient(to bottom , #8fb7e3, #537fa8, #8fb7e3);
 	border: 1px solid #4C77B6;
 	color: #000;
-	font-family: Verdana, Helvetica, Sans-Serif, ËÎÌå;
+	font-family: Verdana, Helvetica, Sans-Serif, ï¿½ï¿½ï¿½ï¿½;
 	font-size: 11px;
 	padding: 1px;
 	cursor: hand;
@@ -833,7 +833,7 @@ td,
 th {
 	font-size: 8pt;
 	color: #333333;
-	font-family: Arial, Helvetica, sans serif, ËÎÌå;
+	font-family: Arial, Helvetica, sans serif, ï¿½ï¿½ï¿½ï¿½;
 }
 
 p {
@@ -872,14 +872,14 @@ input {
 .ItemTitleFont {
 	FONT-SIZE: 9pt;
 	COLOR: #8d3131;
-	FONT-FAMILY: ËÎÌå
+	FONT-FAMILY: ï¿½ï¿½ï¿½ï¿½
 }
 
 .VersionTitle {
 	PADDING-RIGHT: 8px;
 	FONT-SIZE: 9pt;
 	COLOR: #000000;
-	FONT-FAMILY: ËÎÌå
+	FONT-FAMILY: ï¿½ï¿½ï¿½ï¿½
 }
 
 .fixedheader {
