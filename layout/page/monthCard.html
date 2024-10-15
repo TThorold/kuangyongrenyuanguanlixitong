@@ -16,7 +16,7 @@
         }
 
         function valid(obj) {
-            if (!obj.date || !obj.timeFrame) {
+            if (!obj.year || !obj.month) {
                 document.getElementById('rf1').style.display = 'block'
                 return false
             } else {
@@ -25,37 +25,90 @@
             }
         }
 
-        function formatTime(str, isInp) {
+        function formatTime(str) {
             const arr = str.split(" ")
-            if (isInp) {
-                return arr[0].split('/').map(Number)
-            }
-            return arr[0].split('-').map(Number)
+            return arr[0].split('/').map(Number)
         }
 
         function addNodes(obj) {
             const table = document.getElementById("dbGrid_People").getElementsByTagName('tbody')[0];
             let newRow = table.insertRow();
             // 创建三个新单元格
-            let cellID = newRow.insertCell();
-            let cellCardId = newRow.insertCell();
-            let cellWorkId = newRow.insertCell();
-            let cellName = newRow.insertCell();
             let cellDept = newRow.insertCell();
-            let cellIntoTime = newRow.insertCell();
-            let cellOutTime = newRow.insertCell();
-            let cellShift = newRow.insertCell();
-            let cellStayTime = newRow.insertCell();
+            let cellName = newRow.insertCell();
+            let cellCardId = newRow.insertCell();
+            let cell1 = newRow.insertCell();
+            let cell2 = newRow.insertCell();
+            let cell3 = newRow.insertCell();
+            let cell4 = newRow.insertCell();
+            let cell5 = newRow.insertCell();
+            let cell6 = newRow.insertCell();
+            let cell7 = newRow.insertCell();
+            let cell8 = newRow.insertCell();
+            let cell9 = newRow.insertCell();
+            let cell10 = newRow.insertCell();
+            let cell11 = newRow.insertCell();
+            let cell12 = newRow.insertCell();
+            let cell13 = newRow.insertCell();
+            let cell14 = newRow.insertCell();
+            let cell15 = newRow.insertCell();
+            let cell16 = newRow.insertCell();
+            let cell17 = newRow.insertCell();
+            let cell18 = newRow.insertCell();
+            let cell19 = newRow.insertCell();
+            let cell20 = newRow.insertCell();
+            let cell21 = newRow.insertCell();
+            let cell22 = newRow.insertCell();
+            let cell23 = newRow.insertCell();
+            let cell24 = newRow.insertCell();
+            let cell25 = newRow.insertCell();
+            let cell26 = newRow.insertCell();
+            let cell27 = newRow.insertCell();
+            let cell28 = newRow.insertCell();
+            let cell29 = newRow.insertCell();
+            let cell30 = newRow.insertCell();
+            let cell31 = newRow.insertCell();
+            let cellTotal = newRow.insertCell();
+            let cellTtotal = newRow.insertCell();
+            let cellAvgTime = newRow.insertCell();
 
-            cellID.innerHTML = obj.id;
-            cellCardId.innerHTML = obj.cardId;
-            cellWorkId.innerHTML = obj.workId;
-            cellName.innerHTML = obj.name;
-            cellDept.innerHTML = obj.dept;
-            cellIntoTime.innerHTML = obj.intoTime;
-            cellOutTime.innerHTML = obj.outTime;
-            cellShift.innerHTML = obj.shift;
-            cellStayTime.innerHTML = obj.stayTime;
+            cellDept.innerHTML = obj[0]
+            cellName.innerHTML = obj[1]
+            cellCardId.innerHTML = obj[2]
+            cell1.innerHTML = obj[3]
+            cell2.innerHTML = obj[4]
+            cell3.innerHTML = obj[5]
+            cell4.innerHTML = obj[6]
+            cell5.innerHTML = obj[7]
+            cell6.innerHTML = obj[8]
+            cell7.innerHTML = obj[9]
+            cell8.innerHTML = obj[10]
+            cell9.innerHTML = obj[11]
+            cell10.innerHTML = obj[12]
+            cell11.innerHTML = obj[13]
+            cell12.innerHTML = obj[14]
+            cell13.innerHTML = obj[15]
+            cell14.innerHTML = obj[16]
+            cell15.innerHTML = obj[17]
+            cell16.innerHTML = obj[18]
+            cell17.innerHTML = obj[19]
+            cell18.innerHTML = obj[20]
+            cell19.innerHTML = obj[21]
+            cell20.innerHTML = obj[22]
+            cell21.innerHTML = obj[23]
+            cell22.innerHTML = obj[24]
+            cell23.innerHTML = obj[25]
+            cell24.innerHTML = obj[26]
+            cell25.innerHTML = obj[27]
+            cell26.innerHTML = obj[28]
+            cell27.innerHTML = obj[29]
+            cell28.innerHTML = obj[30]
+            cell29.innerHTML = obj[31]
+            cell30.innerHTML = obj[32]
+            cell31.innerHTML = obj[33]
+            cellTotal.innerHTML = obj[34]
+            cellTtotal.innerHTML = obj[35]
+            cellAvgTime.innerHTML = obj[36]
         }
 
         function clearTable() {
@@ -77,131 +130,184 @@
             const validObj = {year, dept, name, cardId, month, workId}
 
             if (valid(validObj)) {
-                const obj = database[i]
                 const inpM = parseInt(validObj.month)
 
                 if (validObj.dept !== '43') return;
                 if (validObj.year !== '2024') return;
                 if (validObj.workId) return;
-                if (validObj.name && obj.items[0].name !== validObj.name) return;
-                if (validObj.cardId && obj.cardId != validObj.cardId) return;
                 if (!(inpM === 7 || inpM === 8 || inpM === 9 || inpM === 10)) return;
 
                 for (let i = 0; i < monthCard.length; i++) {
-                    const obj = monthCard[i]
+                    const obj = monthCard[i].items
 
-                    if (!validObj.cardId || validObj.cardId == obj.cardId) {
+                    let list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '/', [0, 0], [0, 0]]
+                    for (let j = 0; j < obj.length; j++) {
+                        const date1 = formatTime(obj[j].intoTime)
 
+                        if (validObj.name && obj[j].name !== validObj.name) continue;
+                        if (validObj.cardId && obj[j].cardId !== parseInt(validObj.cardId)) continue;
+                        if (date1[1] !== inpM) continue;
+
+                        list[0] = obj[j].dept
+                        list[1] = obj[j].name
+                        list[2] = obj[j].cardId
+                        list[35] = countTime(list[35], obj[j].stayTime)
+                        list[date1[2] + 2] += 1;
                     }
+                    // 计算小计
+                    list[34] = list.slice(3, 34).reduce((accumulator, current) => accumulator + current, 0);
+                    list[35] = list[35][0] + ':' + list[35][1]
+                    list[36] = avgTime(list[35], list[34])
+
+                    if (list[34] !== 0) addNodes(list)
+
+                    if (validObj.cardId && validObj.cardId === obj.cardId) break;
+                    if (validObj.name && validObj.name === obj.name) break;
                 }
             }
 
         }
+
+        function countTime(currentTime, stayTime) {
+            const [ct1, ct2] = currentTime
+            let m = 0
+            let s = 0
+
+            const [t1, t2] = stayTime.split(":").map(Number)
+            const yushu = (ct2 + t2) % 60
+            const zheng = Math.floor((ct2 + t2) / 60)
+
+            if (yushu > 0) {
+                m = ct1 + t1 + zheng
+                s = yushu
+            } else if (yushu < 0) {
+                m = ct1 + t1
+                s = ct2 + t2
+            } else if (yushu === 0) {
+                m = ct1 + t1 + zheng
+                s = 0
+            }
+
+            return [m, s]
+        }
+
+        function avgTime(time, day) {
+            const [m, s] = time.split(":").map(Number)
+            let step1 = ((m * 60) + s) / day;
+
+            let yushu = Math.round(step1 % 60);
+            let zheng = Math.floor(step1 / 60);
+
+            return zheng + ':' + yushu
+        }
     </script>
 </head>
 <body>
-    <div id="Panel1">
+<div id="Panel1">
 
-        年：<select name="dpYear" id="dpYear">
-        <option value="2007">2007</option>
-        <option value="2008">2008</option>
-        <option value="2009">2009</option>
-        <option value="2010">2010</option>
-        <option value="2011">2011</option>
-        <option value="2012">2012</option>
-        <option value="2013">2013</option>
-        <option value="2014">2014</option>
-        <option value="2015">2015</option>
-        <option value="2016">2016</option>
-        <option value="2017">2017</option>
-        <option value="2018">2018</option>
-        <option value="2019">2019</option>
-        <option value="2020">2020</option>
-        <option value="2021">2021</option>
-        <option value="2022">2022</option>
-        <option value="2023">2023</option>
-        <option selected="selected" value="2024">2024</option>
+    年：<select name="dpYear" id="dpYear">
+    <option value="2007">2007</option>
+    <option value="2008">2008</option>
+    <option value="2009">2009</option>
+    <option value="2010">2010</option>
+    <option value="2011">2011</option>
+    <option value="2012">2012</option>
+    <option value="2013">2013</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+    <option selected="selected" value="2024">2024</option>
+</select>
+
+    月：<select name="dpMonth" id="dpMonth">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7" selected="selected">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select>
+
+    部门：<select name="dpBMList" id="dpBMList">
+    <option selected="selected" value="43">综采准备队</option>
+</select>
+
+    姓名：<input name="PeopleName" type="text" id="PeopleName" style="width:50px;">
+    卡号：<input name="TagNo" type="text" id="TagNo" style="width:50px;">
+    工号：<input name="GongHao" type="text" id="GongHao" style="width:50px;">
+
+
+    <select name="ddlRYSX" id="ddlRYSX">
+        <option selected="selected" value="-1">所有人员</option>
+        <option value="0">一般人员</option>
+        <option value="1">管理人员</option>
+        <option value="2">矿领导</option>
     </select>
 
-        月：<select name="dpMonth" id="dpMonth">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7" selected="selected">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-    </select>
+    <input name="Search" type="submit" id="Search" value=" 查 找 " onclick="getData()" class="button"
+           onmouseover="onButton(this);" onmouseout="offButton(this);">
+    <input name="Print" type="submit" id="Print" value=" 打 印 " onclick="alert('暂无权限')" class="button"
+           onmouseover="onButton(this);" onmouseout="offButton(this);">
+    <span id="rf1" style="color:Red;display:none;">年月不能为空</span>
 
-        部门：<select name="dpBMList" id="dpBMList">
-        <option selected="selected" value="43">综采准备队</option>
-    </select>
-
-        姓名：<input name="PeopleName" type="text" id="PeopleName" style="width:50px;">
-        卡号：<input name="TagNo" type="text" id="TagNo" style="width:50px;">
-        工号：<input name="GongHao" type="text" id="GongHao" style="width:50px;">
-
-
-        <select name="ddlRYSX" id="ddlRYSX">
-            <option selected="selected" value="-1">所有人员</option>
-            <option value="0">一般人员</option>
-            <option value="1">管理人员</option>
-            <option value="2">矿领导</option>
-        </select>
-
-        <input name="Search" type="submit" id="Search" value=" 查 找 " onclick="getData()" class="button" onmouseover="onButton(this);" onmouseout="offButton(this);">
-        <input name="Print" type="submit" id="Print" value=" 打 印 " onclick="alert('暂无权限')" class="button" onmouseover="onButton(this);" onmouseout="offButton(this);">
-
-        <div>
-            <table class="Grid" cellspacing="0" rules="all" border="1" id="dbGrid_People"
-                   style="border-style:Dotted;width:100%;border-collapse:collapse;">
-                <thead>
-                <tr style="white-space:nowrap;">
-                    <th scope="col" style="width:40px;">部门</th>
-                    <th scope="col">姓名</th>
-                    <th scope="col">卡号</th>
-                    <th scope="col">01</th>
-                    <th scope="col">02</th>
-                    <th scope="col">03</th>
-                    <th scope="col">04</th>
-                    <th scope="col">05</th>
-                    <th scope="col">06</th>
-                    <th scope="col">07</th>
-                    <th scope="col">08</th>
-                    <th scope="col">09</th>
-                    <th scope="col">10</th>
-                    <th scope="col">11</th>
-                    <th scope="col">12</th>
-                    <th scope="col">13</th>
-                    <th scope="col">14</th>
-                    <th scope="col">15</th>
-                    <th scope="col">16</th>
-                    <th scope="col">17</th>
-                    <th scope="col">18</th>
-                    <th scope="col">19</th>
-                    <th scope="col">20</th>
-                    <th scope="col">21</th>
-                    <th scope="col">22</th>
-                    <th scope="col">23</th>
-                    <th scope="col">24</th>
-                    <th scope="col">25</th>
-                    <th scope="col">26</th>
-                    <th scope="col">27</th>
-                    <th scope="col">28</th>
-                    <th scope="col">29</th>
-                    <th scope="col">30</th>
-                    <th scope="col">31</th>
-                    <th scope="col">小计</th>
-                    <th scope="col">总时间</th>
-                    <th scope="col">日平均时间</th>
-                </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+    <div>
+        <table class="Grid" cellspacing="0" rules="all" border="1" id="dbGrid_People"
+               style="border-style:Dotted;width:100%;border-collapse:collapse;">
+            <thead>
+            <tr style="white-space:nowrap;">
+                <th scope="col" style="width:40px;">部门</th>
+                <th scope="col">姓名</th>
+                <th scope="col">卡号</th>
+                <th scope="col">01</th>
+                <th scope="col">02</th>
+                <th scope="col">03</th>
+                <th scope="col">04</th>
+                <th scope="col">05</th>
+                <th scope="col">06</th>
+                <th scope="col">07</th>
+                <th scope="col">08</th>
+                <th scope="col">09</th>
+                <th scope="col">10</th>
+                <th scope="col">11</th>
+                <th scope="col">12</th>
+                <th scope="col">13</th>
+                <th scope="col">14</th>
+                <th scope="col">15</th>
+                <th scope="col">16</th>
+                <th scope="col">17</th>
+                <th scope="col">18</th>
+                <th scope="col">19</th>
+                <th scope="col">20</th>
+                <th scope="col">21</th>
+                <th scope="col">22</th>
+                <th scope="col">23</th>
+                <th scope="col">24</th>
+                <th scope="col">25</th>
+                <th scope="col">26</th>
+                <th scope="col">27</th>
+                <th scope="col">28</th>
+                <th scope="col">29</th>
+                <th scope="col">30</th>
+                <th scope="col">31</th>
+                <th scope="col">小计</th>
+                <th scope="col">总时间</th>
+                <th scope="col">日平均时间</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </div>
+</div>
 </body>
 </html>

@@ -25,12 +25,9 @@
             }
         }
 
-        function formatTime(str, isInp) {
+        function formatTime(str) {
             const arr = str.split(" ")
-            if (isInp) {
-                return arr[0].split('/').map(Number)
-            }
-            return arr[0].split('-').map(Number)
+            return arr[0].split('/').map(Number)
         }
 
         function addNodes(obj) {
@@ -85,13 +82,13 @@
                     if (validObj.year !== '2024') break;
                     if (validObj.workId) break;
                     if (validObj.name && item.name !== validObj.name) continue;
-                    if (validObj.cardId && item.cardId != validObj.cardId) continue;
+                    if (validObj.cardId && item.cardId !== parseInt(validObj.cardId)) continue;
 
                     const dbt = formatTime(item.intoTime)
                     const inpM = parseInt(validObj.month)
                     if (!(inpM === 7 || inpM === 8 || inpM === 9 || inpM === 10)) break;
 
-                    if (dbt[1] != validObj.month) continue;
+                    if (dbt[1] !== parseInt(validObj.month)) continue;
 
                     item.id = count;
                     addNodes(item)
