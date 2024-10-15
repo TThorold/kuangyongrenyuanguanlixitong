@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0034)http://192.168.127.200/LPanel.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml" foxified=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	无标题页
+</title>
+	<script>
+		var init_flag=0;
+		function init_menu()
+		{
+		init_flag++;
+
+		if(init_flag==1)
+			view_menu(1);
+		}
+
+		function view_menu(id)
+		{
+		    for(i=1;i<=3;i++)
+		    {
+			    menu_i="menu_"+i;
+			    if(i==id)
+			    {
+				    imgsrc1="../../img/layout/menu_left01.gif";
+				    imgsrc2="images/menu_bg01.gif";
+				    imgsrc3="images/menu_right01.gif";
+				    color1="blue";
+			    }
+			    else
+			    {
+				    imgsrc1="images/menu_left02.gif";
+				    imgsrc2="images/menu_bg02.gif";
+				    imgsrc3="images/menu_right02.gif";              
+				    color1="black";
+			    }
+			    menu_top.document.all(menu_i+"1").src=imgsrc1;
+			    menu_top.document.all(menu_i+"2").background=imgsrc2;
+			    menu_top.document.all(menu_i+"3").src=imgsrc3;
+			    menu_top.document.all(menu_i+"2f").color=color1;
+		    }
+		    if(id==1)
+		    {
+			    frame1.rows="22,*,0,0";
+		    }
+		    else if(id==2)
+		    {
+			    frame1.rows="22,0,*,0";
+		    }
+		    else if (id==3)
+		    {
+		        frame1.rows="22,0,0,*"
+		    }		    
+		}
+
+		</script>
+	</head>
+	<frameset id="frame1" border="0" framespacing="0" rows="22,*,0,0" frameborder="NO" cols="*">
+		<frame name="menu_top" src="./MenuTop.html" frameborder="0" noresize="" scrolling="no">
+		<frame name="menu_main" src="./MainMenu.html" frameborder="0" noresize="">
+</frameset>
+
+</html>

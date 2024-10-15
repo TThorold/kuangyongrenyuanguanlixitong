@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../css/css-content.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="./js/monthData.js"></script>
+    <script>
+        function offButton(e) {
+            e.style.background = 'linear-gradient(to bottom , #8fb7e3, #537fa8, #8fb7e3)';
+        }
+
+        function onButton(e) {
+            e.style.background = 'linear-gradient(to bottom , #fdfdad, #e0e01e, #fdfdad)';
+        }
+
+        function valid(obj) {
+            if (!obj.date || !obj.timeFrame) {
+                document.getElementById('rf1').style.display = 'block'
+                return false
+            } else {
+                document.getElementById('rf1').style.display = 'none'
+                return true
+            }
+        }
+
+        function formatTime(str, isInp) {
+            const arr = str.split(" ")
+            if (isInp) {
+                return arr[0].split('/').map(Number)
+            }
+            return arr[0].split('-').map(Number)
+        }
+
+        function addNodes(obj) {
+            const table = document.getElementById("dbGrid_People").getElementsByTagName('tbody')[0];
+            let newRow = table.insertRow();
+            // 创建三个新单元格
+            let cellID = newRow.insertCell();
+            let cellCardId = newRow.insertCell();
+            let cellWorkId = newRow.insertCell();
+            let cellName = newRow.insertCell();
+            let cellDept = newRow.insertCell();
+            let cellIntoTime = newRow.insertCell();
+            let cellOutTime = newRow.insertCell();
+            let cellShift = newRow.insertCell();
+            let cellStayTime = newRow.insertCell();
+
+            cellID.innerHTML = obj.id;
+            cellCardId.innerHTML = obj.cardId;
+            cellWorkId.innerHTML = obj.workId;
+            cellName.innerHTML = obj.name;
+            cellDept.innerHTML = obj.dept;
+            cellIntoTime.innerHTML = obj.intoTime;
+            cellOutTime.innerHTML = obj.outTime;
+            cellShift.innerHTML = obj.shift;
+            cellStayTime.innerHTML = obj.stayTime;
+        }
+
+        function clearTable() {
+            const tbody = document.getElementById('dbGrid_People').getElementsByTagName('tbody')[0];
+            // 直接清空 tbody 中的所有行
+            tbody.innerHTML = '';
+        }
+
+        function getData() {
+            clearTable()
+
+            const dept = document.getElementById("dpBMList").value;
+            const name = document.getElementById("PeopleName").value;
+            const cardId = document.getElementById("TagNo").value;
+            const workId = document.getElementById("GongHao").value;
+            const year = document.getElementById("dpYear").value;
+            const month = document.getElementById("dpMonth").value;
+
+            const validObj = {year, dept, name, cardId, month, workId}
+
+            if (valid(validObj)) {
+                const obj = database[i]
+                const inpM = parseInt(validObj.month)
+
+                if (validObj.dept !== '43') return;
+                if (validObj.year !== '2024') return;
+                if (validObj.workId) return;
+                if (validObj.name && obj.items[0].name !== validObj.name) return;
+                if (validObj.cardId && obj.cardId != validObj.cardId) return;
+                if (!(inpM === 7 || inpM === 8 || inpM === 9 || inpM === 10)) return;
+
+                for (let i = 0; i < monthCard.length; i++) {
+                    const obj = monthCard[i]
+
+                    if (!validObj.cardId || validObj.cardId == obj.cardId) {
+
+                    }
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="Panel1">
+
+        年：<select name="dpYear" id="dpYear">
+        <option value="2007">2007</option>
+        <option value="2008">2008</option>
+        <option value="2009">2009</option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option selected="selected" value="2024">2024</option>
+    </select>
+
+        月：<select name="dpMonth" id="dpMonth">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7" selected="selected">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+        部门：<select name="dpBMList" id="dpBMList">
+        <option selected="selected" value="43">综采准备队</option>
+    </select>
+
+        姓名：<input name="PeopleName" type="text" id="PeopleName" style="width:50px;">
+        卡号：<input name="TagNo" type="text" id="TagNo" style="width:50px;">
+        工号：<input name="GongHao" type="text" id="GongHao" style="width:50px;">
+
+
+        <select name="ddlRYSX" id="ddlRYSX">
+            <option selected="selected" value="-1">所有人员</option>
+            <option value="0">一般人员</option>
+            <option value="1">管理人员</option>
+            <option value="2">矿领导</option>
+        </select>
+
+        <input name="Search" type="submit" id="Search" value=" 查 找 " onclick="getData()" class="button" onmouseover="onButton(this);" onmouseout="offButton(this);">
+        <input name="Print" type="submit" id="Print" value=" 打 印 " onclick="alert('暂无权限')" class="button" onmouseover="onButton(this);" onmouseout="offButton(this);">
+
+        <div>
+            <table class="Grid" cellspacing="0" rules="all" border="1" id="dbGrid_People"
+                   style="border-style:Dotted;width:100%;border-collapse:collapse;">
+                <thead>
+                <tr style="white-space:nowrap;">
+                    <th scope="col" style="width:40px;">部门</th>
+                    <th scope="col">姓名</th>
+                    <th scope="col">卡号</th>
+                    <th scope="col">01</th>
+                    <th scope="col">02</th>
+                    <th scope="col">03</th>
+                    <th scope="col">04</th>
+                    <th scope="col">05</th>
+                    <th scope="col">06</th>
+                    <th scope="col">07</th>
+                    <th scope="col">08</th>
+                    <th scope="col">09</th>
+                    <th scope="col">10</th>
+                    <th scope="col">11</th>
+                    <th scope="col">12</th>
+                    <th scope="col">13</th>
+                    <th scope="col">14</th>
+                    <th scope="col">15</th>
+                    <th scope="col">16</th>
+                    <th scope="col">17</th>
+                    <th scope="col">18</th>
+                    <th scope="col">19</th>
+                    <th scope="col">20</th>
+                    <th scope="col">21</th>
+                    <th scope="col">22</th>
+                    <th scope="col">23</th>
+                    <th scope="col">24</th>
+                    <th scope="col">25</th>
+                    <th scope="col">26</th>
+                    <th scope="col">27</th>
+                    <th scope="col">28</th>
+                    <th scope="col">29</th>
+                    <th scope="col">30</th>
+                    <th scope="col">31</th>
+                    <th scope="col">小计</th>
+                    <th scope="col">总时间</th>
+                    <th scope="col">日平均时间</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

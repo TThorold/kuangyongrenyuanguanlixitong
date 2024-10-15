@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        无标题页
+    </title>
+    <link href="../../css/css-content.css" rel="stylesheet" type="text/css">
+    <link href="../../css/css-print.css" rel="stylesheet" type="text/css">
+    <style>
+        .TreeViewCategories_0 {
+            text-decoration: none;
+        }
+
+        .TreeViewCategories_1 {
+            border-style: none;
+        }
+
+        .TreeViewCategories_2 {
+            width: 100%;
+        }
+
+        .TreeViewCategories_3 {
+            font-size: Larger;
+            font-weight: bold;
+            border-style: none;
+        }
+
+        .TreeViewCategories_4 {
+            width: 100%;
+            padding: 0px 5px 0px 5px;
+        }
+
+        .TreeViewCategories_5 {
+            border-style: none;
+        }
+
+        .TreeViewCategories_6 {
+            width: 100%;
+        }
+
+        .TreeViewCategories_7 {
+            border-style: none;
+        }
+
+        .TreeViewCategories_8 {
+            width: 100%;
+        }
+
+        .TreeViewCategories_9 {
+            border-style: none;
+        }
+
+        .TreeViewCategories_10 {
+            background-color: Transparent;
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        function noAuth() {
+            alert('暂无访问权限')
+        }
+
+        function isFold(id) { // 节点展开折叠
+            if (document.getElementById(id).src.includes('plus')) {
+                document.getElementById(id).src = '../../img/layout/tminus.gif'
+                document.getElementById(`${id}Nodes`).style.display = 'block'
+                if (id === 'TreeViewCategoriesn18') {
+                    document.getElementById('TreeViewCategoriest18').classList.add('SelectedNodeStyle');
+                }
+            } else if (document.getElementById(id).src.includes('minus')) {
+                document.getElementById(id).src = '../../img/layout/tplus.gif'
+                document.getElementById(`${id}Nodes`).style.display = 'none'
+                document.getElementById('TreeViewCategoriest18').classList.remove('SelectedNodeStyle');
+            }
+        }
+
+        function parentChecked(id) {
+            const list = ['TreeViewCategoriest19', 'TreeViewCategoriest20', 'TreeViewCategoriest21']
+            document.getElementById('TreeViewCategoriest18').classList.add('SelectedNodeStyle');
+            document.getElementById(id).classList.add('SelectedNodeStyle');
+
+            for (let i = 0; i < list.length; i++) {
+                if (list[i] !== id) {
+                    document.getElementById(list[i]).classList.remove('SelectedNodeStyle');
+                }
+            }
+        }
+    </script>
+</head>
+
+<body style="margin-left:5px">
+<div id="TreeViewCategories" class="TreeView">
+    <table style="border-width:0;">
+        <tr>
+            <td><img id="TreeViewCategoriesn0" src="../../img/layout/plus.gif" alt="展开" style="border-width:0;"
+                     onclick="isFold('TreeViewCategoriesn0')"/></td>
+            <td class="NodeStyle TreeViewCategories_2 RootNodeStyle TreeViewCategories_4" style="white-space:nowrap;"><a
+                    class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 RootNodeStyle TreeViewCategories_3"
+                    href="#"
+                    id="TreeViewCategoriest0" style="border-style:none;font-size:1em;">查询</a></td>
+        </tr>
+    </table>
+    <div id="TreeViewCategoriesn0Nodes" style="display: none;">
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest1" style="border-style:none;font-size:1em;">人员信息</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest2" style="border-style:none;font-size:1em;">当前井下人员</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest3" style="border-style:none;font-size:1em;">区域人数统计</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest4" style="border-style:none;font-size:1em;">历史轨迹查询</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest5" style="border-style:none;font-size:1em;">按区域查询</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest6" style="border-style:none;font-size:1em;">按识别区查询</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest7" style="border-style:none;font-size:1em;">入井人员查询</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest8" style="border-style:none;font-size:1em;">升井人员查询</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest9" style="border-style:none;font-size:1em;">井下人员查询</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest10" style="border-style:none;font-size:1em;">查看特种作业人员异常</a>
+                </td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest11" style="border-style:none;font-size:1em;">重点区域超时查询</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest12" style="border-style:none;font-size:1em;">重点区域超员查询</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest13" style="border-style:none;font-size:1em;">限制区查询</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest14" style="border-style:none;font-size:1em;">矿井超时查询</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest15" style="border-style:none;font-size:1em;">矿井超员查询</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest16" style="border-style:none;font-size:1em;">特种作业人员井下分布情况</a>
+                </td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/l.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest17" style="border-style:none;font-size:1em;">查询标识卡状态</a></td>
+            </tr>
+        </table>
+    </div>
+    <table style="border-width:0;">
+        <tr>
+            <td>
+                <img id="TreeViewCategoriesn18" onclick="isFold('TreeViewCategoriesn18')"
+                     src="../../img/layout/plus.gif" alt="展开" style="border-width:0;">
+            </td>
+            <td
+                    class="NodeStyle TreeViewCategories_2 RootNodeStyle TreeViewCategories_4"
+                    style="white-space:nowrap;"><a
+                    class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 RootNodeStyle TreeViewCategories_3"
+                    href="#"
+                    id="TreeViewCategoriest18" style="border-style:none;font-size:1em;">考勤</a></td>
+        </tr>
+    </table>
+    <div id="TreeViewCategoriesn18Nodes" style="display: none;">
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td
+                        class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8 TreeViewCategories_10"
+                        style="white-space:nowrap;">
+                    <a
+                            class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                            href="../page/dayReport.html" target="mainFrame"
+                            onclick="parentChecked('TreeViewCategoriest19')"
+                            id="TreeViewCategoriest19" style="border-style:none;font-size:1em;">考勤日报</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7 "
+                        href="../page/monthReport.html" target="mainFrame"
+                        onclick="parentChecked('TreeViewCategoriest20')"
+                        id="TreeViewCategoriest20" style="border-style:none;font-size:1em;">考勤月报</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="../page/monthCard.html" target="mainFrame"
+                        onclick="parentChecked('TreeViewCategoriest21')"
+                        id="TreeViewCategoriest21" style="border-style:none;font-size:1em;">考勤月卡</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest22" style="border-style:none;font-size:1em;">出勤日报统计</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/l.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest23" style="border-style:none;font-size:1em;">出勤年报表</a></td>
+            </tr>
+        </table>
+    </div>
+    <table style="border-width:0;">
+        <tr>
+            <td><img src="../../img/layout/t.gif" alt=""></td>
+            <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8" style="white-space:nowrap;">
+                <a class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                   href="#"
+                   onclick="noAuth()"
+                   id="TreeViewCategoriest24" style="border-style:none;font-size:1em;">人事管理</a></td>
+        </tr>
+    </table>
+    <table style="border-width:0;">
+        <tr>
+            <td>
+                <img id="TreeViewCategoriesn25" onclick="isFold('TreeViewCategoriesn25')"
+                     src="../../img/layout/tplus.gif" alt="展开 报警求援" style="border-width:0;">
+            </td>
+            <td class="NodeStyle TreeViewCategories_2 RootNodeStyle TreeViewCategories_4" style="white-space:nowrap;"><a
+                    class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 RootNodeStyle TreeViewCategories_3"
+                    href="#"
+                    id="TreeViewCategoriest25" style="border-style:none;font-size:1em;">报警求援</a></td>
+        </tr>
+    </table>
+    <div id="TreeViewCategoriesn25Nodes" style="display:none;">
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest26" style="border-style:none;font-size:1em;">报警管理</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest27" style="border-style:none;font-size:1em;">呼叫管理</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest28" style="border-style:none;font-size:1em;">井下报警</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/l.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest29" style="border-style:none;font-size:1em;">井下求援</a></td>
+            </tr>
+        </table>
+    </div>
+    <table style="border-width:0;">
+        <tr>
+            <td>
+                <img id="TreeViewCategoriesn30" onclick="isFold('TreeViewCategoriesn30')"
+                     src="../../img/layout/tplus.gif" alt="展开 地图" style="border-width:0;">
+            </td>
+            <td class="NodeStyle TreeViewCategories_2 RootNodeStyle TreeViewCategories_4" style="white-space:nowrap;"><a
+                    class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 RootNodeStyle TreeViewCategories_3"
+                    href="#"
+                    id="TreeViewCategoriest30" style="border-style:none;font-size:1em;">地图</a></td>
+        </tr>
+    </table>
+    <div id="TreeViewCategoriesn30Nodes" style="display:none;">
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest31" style="border-style:none;font-size:1em;">地图显示</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/l.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest32" style="border-style:none;font-size:1em;">轨迹回放</a></td>
+            </tr>
+        </table>
+    </div>
+    <table style="border-width:0;">
+        <tr>
+            <td>
+                <img id="TreeViewCategoriesn33" onclick="isFold('TreeViewCategoriesn33')"
+                     src="../../img/layout/tplus.gif" alt="展开 系统设置" style="border-width:0;">
+            </td>
+            <td class="NodeStyle TreeViewCategories_2 RootNodeStyle TreeViewCategories_4" style="white-space:nowrap;"><a
+                    class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 RootNodeStyle TreeViewCategories_3"
+                    href="#"
+                    id="TreeViewCategoriest33" style="border-style:none;font-size:1em;">系统设置</a></td>
+        </tr>
+    </table>
+    <div id="TreeViewCategoriesn33Nodes" style="display:none;">
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest34" style="border-style:none;font-size:1em;">查看设备状态</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/t.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest35" style="border-style:none;font-size:1em;">修改密码</a></td>
+            </tr>
+        </table>
+        <table style="border-width:0;">
+            <tr>
+                <td>
+                    <div style="width:0px;height:1px"><img src="../../img/layout/i.gif" alt=""></div>
+                </td>
+                <td><img src="../../img/layout/l.gif" alt=""></td>
+                <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8"
+                    style="white-space:nowrap;"><a
+                        class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                        href="#"
+                        onclick="noAuth()"
+                        id="TreeViewCategoriest36" style="border-style:none;font-size:1em;">特种作业人员活动路线设置</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table style="border-width:0;">
+        <tr>
+            <td><img src="../../img/layout/t.gif" alt=""></td>
+            <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8" style="white-space:nowrap;">
+                <a class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                   href="#"
+                   onclick="noAuth()"
+                   id="TreeViewCategoriest37" style="border-style:none;font-size:1em;">组件下载</a></td>
+        </tr>
+    </table>
+    <table style="border-width:0;">
+        <tr>
+            <td><img src="../../img/layout/l.gif" alt=""></td>
+            <td class="NodeStyle TreeViewCategories_2 LeafNodesStyle TreeViewCategories_8" style="white-space:nowrap;">
+                <a class="TreeViewCategories_0 NodeStyle TreeViewCategories_1 LeafNodesStyle TreeViewCategories_7"
+                   href="../../index.html" target="_top"
+                   id="TreeViewCategoriest38" style="border-style:none;font-size:1em;">退出系统</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+
+</html>
