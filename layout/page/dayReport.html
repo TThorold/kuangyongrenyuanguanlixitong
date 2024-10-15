@@ -84,11 +84,14 @@
                 let count = 1;
                 for (let i = 0; i < database.length; i++) {
                     const item = database[i]
-                    if (validObj.workId) continue;
+                    if (validObj.workId) break;
+                    if (validObj.dept !== '43') break;
                     if (validObj.name && item.name !== validObj.name) continue;
                     if (validObj.cardId && item.cardId !== validObj.cardId) continue;
                     const inp = formatTime(validObj.date)
                     const dbt = formatTime(item.intoTime)
+                    // 待判断年月日
+                    if (!(dbt[1] === 7 || dbt[1] === 8 || dbt[1] === 9 || dbt[1] === 10))
 
                     if (inp[2] !== dbt[1] || inp[0] !== dbt[2]) continue;
 

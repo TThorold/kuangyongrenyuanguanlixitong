@@ -76,20 +76,23 @@
 
             const validObj = {year, month, dept, name, cardId, workId}
 
-            console.log(validObj)
             if (valid(validObj)) {
                 let count = 1;
                 for (let i = 0; i < database.length; i++) {
                     const item = database[i]
-                    if (validObj.dept !== '43') continue;
-                    if (validObj.year !== '2024') continue;
-                    if (validObj.workId) continue;
+                    if (validObj.dept !== '43') break;
+                    if (validObj.year !== '2024') break;
+                    if (validObj.workId) break;
                     if (validObj.name && item.name !== validObj.name) continue;
                     if (validObj.cardId && item.cardId !== validObj.cardId) continue;
 
                     const dbt = formatTime(item.intoTime)
+                    const inpM = validObj.month
+                    if (!(inpM[1] === 7 || inpM[1] === 8 || inpM[1] === 9 || inpM[1] === 10)) break;
+
                     if (dbt[1] != validObj.month) continue;
 
+                    console.log('2')
                     item.id = count;
                     addNodes(item)
                     count++;
@@ -152,8 +155,10 @@
         <option value="2">矿领导</option>
     </select>
 
-    <input name="Search" type="submit" id="Search" value=" 查 找 " onclick="getData()" class="button" onmouseover="onButton(this);" onmouseout="offButton(this);">
-    <input name="Print" type="submit" id="Print" value=" 打 印 " onclick="alert('暂无权限')" class="button" onmouseover="onButton(this);" onmouseout="offButton(this);">
+    <input name="Search" type="submit" id="Search" value=" 查 找 " onclick="getData()" class="button"
+           onmouseover="onButton(this);" onmouseout="offButton(this);">
+    <input name="Print" type="submit" id="Print" value=" 打 印 " onclick="alert('暂无权限')" class="button"
+           onmouseover="onButton(this);" onmouseout="offButton(this);">
     <span id="rf1" style="color:Red;display:none;">年月不能为空</span>
 
     <div>
