@@ -16,7 +16,7 @@
         }
 
         function valid(obj) {
-            if (!obj.date || !obj.timeFrame) {
+            if (!obj.year || !obj.month) {
                 document.getElementById('rf1').style.display = 'block'
                 return false
             } else {
@@ -71,30 +71,29 @@
             const name = document.getElementById("PeopleName").value;
             const cardId = document.getElementById("TagNo").value;
             const workId = document.getElementById("GongHao").value;
-            const date = document.getElementById("rptDate").value;
-            const timeFrame = document.getElementById("ddlTime").value;
+            const year = document.getElementById("dpYear").value;
+            const month = document.getElementById("dpMonth").value;
 
-            const validObj = {date, dept, name, cardId, timeFrame, workId}
+            const validObj = {year, month, dept, name, cardId, workId}
 
+            console.log(validObj)
             if (valid(validObj)) {
-                // let count = 1;
-                // for (let i = 0; i < database.length; i++) {
-                //     const item = database[i]
-                //     if (validObj.workId) continue;
-                //     if (validObj.name && item.name !== validObj.name) continue;
-                //     if (validObj.cardId && item.cardId !== validObj.cardId) continue;
-                //     const inp = formatTime(validObj.date)
-                //     const dbt = formatTime(item.intoTime)
-                //
-                //     // if (inp[2] !== dbt[1] || inp[0] !== dbt[2]) continue;
-                //
-                //     if (count > 10) break;
-                //
-                //     item.id = count;
-                //     addNodes(item)
-                //     count++;
-                //
-                // }
+                let count = 1;
+                for (let i = 0; i < database.length; i++) {
+                    const item = database[i]
+                    if (validObj.dept !== '43') continue;
+                    if (validObj.year !== '2024') continue;
+                    if (validObj.workId) continue;
+                    if (validObj.name && item.name !== validObj.name) continue;
+                    if (validObj.cardId && item.cardId !== validObj.cardId) continue;
+
+                    const dbt = formatTime(item.intoTime)
+                    if (dbt[1] != validObj.month) continue;
+
+                    item.id = count;
+                    addNodes(item)
+                    count++;
+                }
             }
 
         }
@@ -155,6 +154,7 @@
 
     <input name="Search" type="submit" id="Search" value=" 查 找 " onclick="getData()" class="button" onmouseover="onButton(this);" onmouseout="offButton(this);">
     <input name="Print" type="submit" id="Print" value=" 打 印 " onclick="alert('暂无权限')" class="button" onmouseover="onButton(this);" onmouseout="offButton(this);">
+    <span id="rf1" style="color:Red;display:none;">年月不能为空</span>
 
     <div>
         <table class="Grid" cellspacing="0" rules="all" border="1" id="dbGrid_People"
