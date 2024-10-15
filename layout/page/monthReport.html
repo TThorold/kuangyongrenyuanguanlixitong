@@ -25,12 +25,12 @@
             }
         }
 
-        function formatTime(str) {
+        function formatTime(str, isInp) {
             const arr = str.split(" ")
-            const ddyymm = arr[0].split('/')
-            let time = [ddyymm[2], ddyymm[0], ddyymm[1]]
-            time = time.map(Number)
-            return time
+            if (isInp) {
+                return arr[0].split('/').map(Number)
+            }
+            return arr[0].split('-').map(Number)
         }
 
         function addNodes(obj) {
@@ -78,21 +78,21 @@
 
             if (valid(validObj)) {
                 let count = 1;
+
                 for (let i = 0; i < database.length; i++) {
                     const item = database[i]
                     if (validObj.dept !== '43') break;
                     if (validObj.year !== '2024') break;
                     if (validObj.workId) break;
                     if (validObj.name && item.name !== validObj.name) continue;
-                    if (validObj.cardId && item.cardId !== validObj.cardId) continue;
+                    if (validObj.cardId && item.cardId != validObj.cardId) continue;
 
                     const dbt = formatTime(item.intoTime)
-                    const inpM = validObj.month
-                    if (!(inpM[1] === 7 || inpM[1] === 8 || inpM[1] === 9 || inpM[1] === 10)) break;
+                    const inpM = parseInt(validObj.month)
+                    if (!(inpM === 7 || inpM === 8 || inpM === 9 || inpM === 10)) break;
 
                     if (dbt[1] != validObj.month) continue;
 
-                    console.log('2')
                     item.id = count;
                     addNodes(item)
                     count++;
@@ -133,7 +133,7 @@
     <option value="4">4</option>
     <option value="5">5</option>
     <option value="6">6</option>
-    <option value="7">7</option>
+    <option selected="selected" value="7">7</option>
     <option value="8">8</option>
     <option value="9">9</option>
     <option value="10">10</option>

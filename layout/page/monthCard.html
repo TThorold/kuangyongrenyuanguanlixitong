@@ -5,7 +5,7 @@
     <title>Title</title>
     <link href="../../css/css-content.css" rel="stylesheet" type="text/css">
 
-    <script type="text/javascript" src="./js/data.js"></script>
+    <script type="text/javascript" src="./js/monthData.js"></script>
     <script>
         function offButton(e) {
             e.style.background = 'linear-gradient(to bottom , #8fb7e3, #537fa8, #8fb7e3)';
@@ -25,12 +25,12 @@
             }
         }
 
-        function formatTime(str) {
+        function formatTime(str, isInp) {
             const arr = str.split(" ")
-            const ddyymm = arr[0].split('/')
-            let time = [ddyymm[2], ddyymm[0], ddyymm[1]]
-            time = time.map(Number)
-            return time
+            if (isInp) {
+                return arr[0].split('/').map(Number)
+            }
+            return arr[0].split('-').map(Number)
         }
 
         function addNodes(obj) {
@@ -71,30 +71,33 @@
             const name = document.getElementById("PeopleName").value;
             const cardId = document.getElementById("TagNo").value;
             const workId = document.getElementById("GongHao").value;
-            const date = document.getElementById("rptDate").value;
-            const timeFrame = document.getElementById("ddlTime").value;
+            const year = document.getElementById("dpYear").value;
+            const month = document.getElementById("dpMonth").value;
 
-            const validObj = {date, dept, name, cardId, timeFrame, workId}
+            const validObj = {year, dept, name, cardId, month, workId}
 
             if (valid(validObj)) {
-                // let count = 1;
-                // for (let i = 0; i < database.length; i++) {
-                //     const item = database[i]
-                //     if (validObj.workId) continue;
-                //     if (validObj.name && item.name !== validObj.name) continue;
-                //     if (validObj.cardId && item.cardId !== validObj.cardId) continue;
-                //     const inp = formatTime(validObj.date)
-                //     const dbt = formatTime(item.intoTime)
-                //
-                //     // if (inp[2] !== dbt[1] || inp[0] !== dbt[2]) continue;
-                //
-                //     if (count > 10) break;
-                //
-                //     item.id = count;
-                //     addNodes(item)
-                //     count++;
-                //
-                // }
+                const obj = database[i]
+                const inpM = parseInt(validObj.month)
+
+                if (validObj.dept !== '43') return;
+                if (validObj.year !== '2024') return;
+                if (validObj.workId) return;
+                // if (validObj.name && obj.items[0].name !== validObj.name) return;
+                // if (validObj.cardId && obj.cardId != validObj.cardId) return;
+                if (!(inpM === 7 || inpM === 8 || inpM === 9 || inpM === 10)) return;
+
+                for (let i = 0; i < monthCard.length; i++) {
+                    const obj = monthCard[i]
+
+                    if (validObj.name) {
+
+                    }
+
+                    if (!validObj.cardId) {
+
+                    }
+                }
             }
 
         }
@@ -131,7 +134,7 @@
         <option value="4">4</option>
         <option value="5">5</option>
         <option value="6">6</option>
-        <option value="7">7</option>
+        <option value="7" selected="selected">7</option>
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="10">10</option>

@@ -29,12 +29,12 @@
             }
         }
 
-        function formatTime(str) {
+        function formatTime(str, isInp) {
             const arr = str.split(" ")
-            const ddyymm = arr[0].split('/')
-            let time = [ddyymm[2], ddyymm[0], ddyymm[1]]
-            time = time.map(Number)
-            return time
+            if (isInp) {
+                return arr[0].split('/').map(Number)
+            }
+            return arr[0].split('-').map(Number)
         }
 
         function addNodes(obj) {
@@ -87,13 +87,15 @@
                     if (validObj.workId) break;
                     if (validObj.dept !== '43') break;
                     if (validObj.name && item.name !== validObj.name) continue;
-                    if (validObj.cardId && item.cardId !== validObj.cardId) continue;
-                    const inp = formatTime(validObj.date)
+                    if (validObj.cardId && item.cardId != validObj.cardId) continue;
+                    const inp = formatTime(validObj.date, true)
                     const dbt = formatTime(item.intoTime)
+                    console.log('inp', inp)
+                    console.log('dbt', dbt)
                     // 待判断年月日
-                    if (!(dbt[1] === 7 || dbt[1] === 8 || dbt[1] === 9 || dbt[1] === 10))
+                    if (!(dbt[1] === 7 || dbt[1] === 8 || dbt[1] === 9 || dbt[1] === 10)) break;
 
-                    if (inp[2] !== dbt[1] || inp[0] !== dbt[2]) continue;
+                    if (inp[1] !== dbt[1] || inp[2] !== dbt[2]) continue;
 
                     if (count > 10) break;
 
