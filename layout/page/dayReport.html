@@ -11,12 +11,81 @@
     <script type="text/javascript" src="./js/data.js"></script>
 
     <script>
+
+        let data = []
+        let arrowEnum = {
+            'intoTime': [0, 'arrow1'],
+            'outTime': [0, 'arrow2'],
+            'shift': [0, 'arrow3'],
+            'stayTime': [0, 'arrow4'],
+        }
+
+        // 按钮变色
         function offButton(e) {
             e.style.background = 'linear-gradient(to bottom , #8fb7e3, #537fa8, #8fb7e3)';
         }
 
         function onButton(e) {
             e.style.background = 'linear-gradient(to bottom , #fdfdad, #e0e01e, #fdfdad)';
+        }
+
+        // 箭头显示
+        function changeArrow(id) {
+            const e = document.getElementById(id)
+            e.style.display = (e.style.display === 'inline' ? 'none' : 'inline');
+
+        }
+
+        // 数据升序
+        function dataSort(str) {
+            if (arrowEnum[str][0] === 0) {
+                // 正序
+                data.sort(
+                    function (a, b) {
+                        return toNum(a[str]) - toNum(b[str])
+                    }
+                )
+
+                arrowEnum[str][0] = 1
+                document.getElementById(arrowEnum[str][1]).innerText = '↑'
+
+            } else {
+                // 倒序
+                data.sort(
+                    function (a, b) {
+                        return toNum(b[str]) - toNum(a[str])
+                    }
+                )
+
+                arrowEnum[str][0] = 0
+                document.getElementById(arrowEnum[str][1]).innerText = '↓'
+            }
+
+            clearTable()
+            data.forEach(item => {
+                addNodes(item)
+            })
+        }
+
+        function toNum(num) {
+            let str1;
+            let str2;
+
+            if (num.length > 7) {
+                str1 = num.split(' ')
+                str2 = str1[1].split(':')
+            } else if (num.length === 5) {
+                str2 = num.split(':')
+            } else if (num.length === 3) {
+                const numEnum = {
+                    '零点班': 0,
+                    '四点班': 4,
+                    '八点班': 8,
+                }
+
+                return numEnum[num]
+            }
+            return (parseInt(str2[0]) * 60) + parseInt(str2[1])
         }
 
         function valid(obj) {
@@ -67,6 +136,7 @@
 
         function getData() {
             clearTable()
+            data = []
 
             const dept = document.getElementById("dpBMList").value;
             const name = document.getElementById("PeopleName").value;
@@ -77,7 +147,6 @@
 
             const validObj = {date, dept, name, cardId, timeFrame, workId}
 
-            console.log(validObj)
             if (valid(validObj)) {
                 let count = 1;
                 for (let i = 0; i < database.length; i++) {
@@ -96,11 +165,10 @@
 
                     item.id = count;
                     addNodes(item)
+                    data.push(item)
                     count++;
-
                 }
             }
-
         }
 
     </script>
@@ -199,20 +267,38 @@
             <thead>
             <tr style="white-space:nowrap;">
                 <th scope="col" style="width:40px;">序号</th>
-                <th scope="col"><a href="#">卡号</a>
-                </th>
-                <th scope="col"><a href="#">工号</a>
-                </th>
+                <th scope="col"><a href="#">卡号</a></th>
+                <th scope="col"><a href="#">工号</a></th>
                 <th scope="col"><a href="#">姓名</a></th>
-                <th scope="col"><a href="#">部门</a>
+                <th scope="col"><a href="#">部门</a></th>
+                <th scope="col">
+                    <a href="#" onclick="dataSort('intoTime')" onmouseover="changeArrow('arrow1');"
+                       onmouseout="changeArrow('arrow1');">
+                        入井时间
+                        <span id="arrow1" style="margin-left: 2px;display:none;">↓</span>
+                    </a>
                 </th>
-                <th scope="col"><a href="#">入井时间</a>
+                <th scope="col">
+                    <a href="#" onclick="dataSort('outTime')" onmouseover="changeArrow('arrow2');"
+                       onmouseout="changeArrow('arrow2');">
+                        升井时间
+                        <span id="arrow2" style="margin-left: 2px;display:none;">↓</span>
+                    </a>
                 </th>
-                <th scope="col"><a href="#">升井时间</a>
+                <th scope="col">
+                    <a href="#" onclick="dataSort('shift')" onmouseover="changeArrow('arrow3');"
+                       onmouseout="changeArrow('arrow3');">
+                        班次
+                        <span id="arrow3" style="margin-left: 2px;display:none;">↓</span>
+                    </a>
                 </th>
-                <th scope="col"><a href="#">班次</a>
+                <th scope="col">
+                    <a href="#" onclick="dataSort('stayTime')" onmouseover="changeArrow('arrow4');"
+                       onmouseout="changeArrow('arrow4');">
+                        停留时间
+                        <span id="arrow4" style="margin-left: 2px;display:none;">↓</span>
+                    </a>
                 </th>
-                <th scope="col"><a href="#">停留时间</a></th>
             </tr>
             </thead>
             <tbody></tbody>
